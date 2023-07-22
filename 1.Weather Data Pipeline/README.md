@@ -1,4 +1,6 @@
 # Weather Data Pipeline
+![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e3ba62ba-1a5b-4c67-8172-826caa900a64)
+![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/6e17efb8-39a9-4282-ad7b-005e0b6c6443)
 
 This project implements a data pipeline to extract weather data from an API, transform it, and load it into a PostgreSQL database table named 'weather_data.' Additionally, it extracts city lookup data from S3, loads it into another PostgreSQL table named 'city_look_up,' and finally performs a join operation on both tables to create a joined dataset. The joined data is then loaded back into S3.
 
