@@ -17,13 +17,13 @@ The data pipeline consists of the following steps:
 
 • This task is divided into two parallel branches.
 
-2.1 API Data Extraction, Transformation, and Load:
+1. API Data Extraction, Transformation, and Load:
 
 • In one branch of the parallel task, data is extracted from an API source.
 The extracted data is then transformed into a suitable format for analysis.
 The transformed data is loaded into the 'weather_data' table in the PostgreSQL database.
 
-2.2 S3 Data Extraction and Load:
+2. S3 Data Extraction and Load:
 
 • In the other branch of the parallel task, data is extracted from S3 storage.
 The data is directly loaded into the 'city_look_up' table in the PostgreSQL database using aws_s3.table_import_from_s3.
