@@ -53,7 +53,7 @@ To run this project, follow these steps:
 
 4. Install dependencies:
 
-• Install the required libraries and packages as specified in the project's requirements/Dependencies file.
+• Install the required libraries and packages as specified in the project's Dependencies section.
 
 5. Run the data pipeline:
 
