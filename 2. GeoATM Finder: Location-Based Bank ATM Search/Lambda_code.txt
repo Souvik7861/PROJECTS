@@ -1,0 +1,97 @@
+Creating Lambda Layer:
+-----------------------------
+sudo apt-get update
+sudo apt install virtualenv
+virtualenv -p /usr/bin/python3 algolia_test
+source algolia_test/bin/activate
+python3 --version  
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip
+mkdir -p lambda_layers/python/lib/python3.11/site-packages
+cd lambda_layers/python/lib/python3.11/site-packages
+python3 -m pip install --upgrade algoliasearch -t .
+cd ~/lambda_layers
+sudo apt install zip
+zip -r algolia_layer.zip *
+sudo apt  install awscli
+aws s3 cp  algolia_layer.zip s3://{Name of your Bucket}/
+
+
+Lambda Code for Inserting Data in Algolia :
+-----------------
+import json
+import boto3
+from algoliasearch.search_client import SearchClient
+algolia_client = SearchClient.create("VPV57IFIZ1", "64f9ec6bb072865e36e35a54dd852309")
+index = algolia_client.init_index("dev_test")
+
+client = boto3.client('location')
+
+def lambda_handler(event, context):
+    print(event)
+    for i in event['Records']:
+        if i['eventName']=='INSERT':
+            locationId=i['dynamodb']['NewImage']['locationId']['S']
+            name=i['dynamodb']['NewImage']['name']['S']
+            line1=i['dynamodb']['NewImage']['line1']['S']
+            line2=i['dynamodb']['NewImage']['line2']['S']
+            city=i['dynamodb']['NewImage']['city']['S']
+            state=i['dynamodb']['NewImage']['state']['S']
+            country=i['dynamodb']['NewImage']['country']['S']
+            zipCode=i['dynamodb']['NewImage']['zipCode']['S']
+            complete_address=locationId+','+name+','+line1+','+line2+','+city+','+state+','+zipCode
+            print("Complete Address : {}".format(complete_address))
+            
+            record = {"objectID": locationId, "name":name ,"line1":line1,"line2":line2,"city":city,"state":state,"country":country,"zipCode":zipCode}
+            
+            response = client.search_place_index_for_text(IndexName='placeIndex', 
+            FilterCountries=["IND"], 
+            MaxResults=1, 
+            Text=complete_address
+            )
+            
+            location_response = response["Results"][0]['Place']['Geometry']['Point']
+            record['_geoloc']={
+                                "lat": location_response[1],
+                                "lng": location_response[0]
+                              }
+            print(record)
+            
+            index.save_object(record).wait()
+            
+        elif i['eventName']=='REMOVE':
+            location_id=i['dynamodb']['OldImage']['locationId']['S']
+            print("Deleting the location ID : {}".format(location_id))
+            index.delete_objects([location_id])
+
+
+Lambda Code to perform Location Based Search :
+-----------------
+import json
+import boto3
+from algoliasearch.search_client import SearchClient
+algolia_client = SearchClient.create("VPV57IFIZ1", "64f9ec6bb072865e36e35a54dd852309")
+index = algolia_client.init_index("dev_test")
+
+
+client = boto3.client('location')
+
+def lambda_handler(event, context):
+    complete_address=json.loads(event['body'])['complete_address']
+    print("Complete Address : {}".format(complete_address))
+    
+    response = client.search_place_index_for_text(IndexName='placeIndex', 
+            FilterCountries=["IND"], 
+            MaxResults=1, 
+            Text=complete_address
+            )
+    longi,lat = response["Results"][0]['Place']['Geometry']['Point']
+    
+    results = index.search('', {
+    'aroundLatLng': '{}, {}'.format(lat,longi),
+    'aroundRadius' : 100000 })
+    return results
+    
+
+
+
