@@ -36,6 +36,7 @@ The project involves several steps to set up the complete system for location-ba
 • Insert sample ATM location data into the banklocation DynamoDB table using SQL-like queries.  
 • This step populates the DynamoDB table with sample data for testing and demonstration. 
 ![p2 s2](https://github.com/Souvik7861/PROJECTS/assets/120063616/00474e28-5a11-446a-ab19-2478634002bd)
+
 ![p2 s9](https://github.com/Souvik7861/PROJECTS/assets/120063616/9d90fa99-1546-40be-bcfb-7c8784779dd9)
 
 #### Step 6: Implement Location-Based Search Lambda
