@@ -1,4 +1,6 @@
-# Kafka Data Pipeline
+# Serverless Kafka Data Pipeline
+![p3 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/45cffae8-ffff-4536-9511-c1d547678c68)
+
 This project demonstrates how to build a data pipeline using Amazon Managed Streaming for Apache Kafka (Amazon MSK), AWS Lambda, and Amazon Simple Queue Service (SQS).
 
 ## Steps
@@ -36,6 +38,22 @@ This project demonstrates how to build a data pipeline using Amazon Managed Stre
 
 ## Code for Lambda Functions
 
+Code to create the Lambda Layer:
+```bash
+sudo apt-get update
+sudo apt install python3-virtualenv
+virtualenv kafka_Layer
+source kafka_Layer/bin/activate
+python3 --version  
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip
+mkdir -p lambda_layers/python/lib/python3.11/site-packages
+cd lambda_layers/python/lib/python3.11/site-packages
+pip install  kafka-python -t .
+cd ~
+sudo apt install zip
+zip -r kafka_Layer.zip *
+```
 
 The Producer Lambda function code :
 
