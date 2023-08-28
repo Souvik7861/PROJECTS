@@ -10,16 +10,19 @@ This project demonstrates how to build a data pipeline using Amazon Managed Stre
 4. Create two route tables, one for the public subnets and one for the private subnets. 
 5. Attach the Internet gateway to the public route tables.
 6. Create a NAT gateway and attach it to the private route tables.
+![p3 s11](https://github.com/Souvik7861/PROJECTS/assets/120063616/bfe5daf3-f33b-4192-a61f-7491d496087b)
 7. Launch an Amazon MSK cluster in the private subnets.
 8. Create a Lambda function Producer Lambda that publishes messages to the Amazon MSK cluster.
+![p3 s4](https://github.com/Souvik7861/PROJECTS/assets/120063616/53a3ddfb-4aee-403e-a285-6412e72c3811)
 9. Increase the timeout for the Lambda function to 2 minutes.
 10. Configure the Lambda function to have access to SQS, Amazon MSK, and the VPC.
 11. Launch an SQS queue.
 12. Create an API gateway and configure it to integrate with the SQS queue.
 13. Create an S3 bucket for data archival.
 14. Configure Amazon Kinesis Firehose.
-15. Create a Lambda function that consumes messages from Amazon MSK and triggers an Amazon Kinesis Firehose delivery stream, which then writes the messages to Amazon S3.
-16. Configure the Lambda function to have access to Amazon Kinesis VPC and MSK.
+15. Create a Lambda function that consumes messages from Amazon MSK and triggers an Amazon Kinesis Firehose delivery stream, which then writes the messages to Amazon S3.![p3 s6](https://github.com/Souvik7861/PROJECTS/assets/120063616/06d766f8-9d35-4456-afb5-35800d9dbf63)
+
+16. Configure the Lambda function to have access to Amazon Kinesis , VPC and MSK.
 17. Launch an EC2 instance in each of the public and private subnets.
 18. Add the security groups for the EC2 instances and the Amazon MSK cluster to allow all traffic between them.
 19. Install Kafka on the EC2 instance in the private subnet.
@@ -27,7 +30,10 @@ This project demonstrates how to build a data pipeline using Amazon Managed Stre
 21. Start a Kafka console consumer on the EC2 instance in the public subnet.
 22. Send some messages to the Lambda function.
 23. Verify that the messages are published to the Kafka topic.
-24. Verify that the messages are written to S3.
+	![p3 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/b96a2bc9-2ed8-4800-9b88-0877be9baf5b)
+
+25. Verify that the messages are written to S3.
+![p3 s8](https://github.com/Souvik7861/PROJECTS/assets/120063616/bfdef04d-6beb-4fe4-a9f0-0cd59e129f44)
 
 
 ## Dependencies
