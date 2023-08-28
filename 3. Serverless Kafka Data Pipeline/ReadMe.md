@@ -30,6 +30,7 @@ This project demonstrates how to build a data pipeline using Amazon Managed Stre
 21. Start a Kafka console consumer on the EC2 instance in the public subnet.
 22. Send some messages to the Lambda function.
 23. Verify that the messages are published to the Kafka topic.
+    
 	![p3 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/b96a2bc9-2ed8-4800-9b88-0877be9baf5b)
 
 25. Verify that the messages are written to S3.
