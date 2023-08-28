@@ -12,6 +12,8 @@ This project demonstrates how to build a data pipeline using Amazon Managed Stre
 6. Create a NAT gateway and attach it to the private route tables.
 ![p3 s11](https://github.com/Souvik7861/PROJECTS/assets/120063616/bfe5daf3-f33b-4192-a61f-7491d496087b)
 7. Launch an Amazon MSK cluster in the private subnets.
+![p3 s12](https://github.com/Souvik7861/PROJECTS/assets/120063616/5354bc4a-a139-401c-8209-cb77ceaafec7)
+
 8. Create a Lambda function Producer Lambda that publishes messages to the Amazon MSK cluster.
 ![p3 s4](https://github.com/Souvik7861/PROJECTS/assets/120063616/53a3ddfb-4aee-403e-a285-6412e72c3811)
 9. Configure the Lambda function to have access to SQS, Amazon MSK, and the VPC.
@@ -28,15 +30,16 @@ This project demonstrates how to build a data pipeline using Amazon Managed Stre
 18. Install Kafka on the EC2 instance in the private subnet.
 19. Create a Kafka topic.
 20. Start a Kafka console consumer on the EC2 instance in the public subnet.
-21. Test the data pipeline with external application to post data through api gateway.![p3 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/014b0b16-f9ab-4188-bc27-090dcd2e6c88)
-
+21. Test the data pipeline with external application to post data through api gateway.
+![p3 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/014b0b16-f9ab-4188-bc27-090dcd2e6c88)
 22. Verify that the messages are published to the Kafka topic.
-    
-	![p3 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/b96a2bc9-2ed8-4800-9b88-0877be9baf5b)
+
+![p3 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/b96a2bc9-2ed8-4800-9b88-0877be9baf5b)
 
 23. Verify that the messages are written to S3.
 ![p3 s8](https://github.com/Souvik7861/PROJECTS/assets/120063616/bfdef04d-6beb-4fe4-a9f0-0cd59e129f44)
 24. Verify the sample S3 files content.
+    
 ![p3 s9](https://github.com/Souvik7861/PROJECTS/assets/120063616/83b97412-ee35-4c9f-b34d-dc213123bb5f)
 
 
