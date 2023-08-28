@@ -77,8 +77,7 @@ from kafka import KafkaProducer
 import json
 
 topic_name='{Provide the topic name here}'
-producer = KafkaProducer(bootstrap_servers=['{Put the broker URLs here}'
-,'{Put the broker URLs here}'],value_serializer=lambda x: dumps(x).encode('utf-8'))
+producer = KafkaProducer(bootstrap_servers=['{Put the broker URLs here}','{Put the broker URLs here}'],value_serializer=lambda x: dumps(x).encode('utf-8'))
 
 def lambda_handler(event, context):
     print(event)
