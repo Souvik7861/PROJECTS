@@ -24,6 +24,7 @@ Here's an overview of the architecture:
 
 6. Glue ETL Job: The Lambda function triggers a Glue ETL job, which extracts data from the Glue Data Catalog table, transforms it, and loads it into a target S3 bucket.
 ![p4 s7](https://github.com/Souvik7861/PROJECTS/assets/120063616/41352bcd-3481-4814-a0cd-7e76c5f96fb0)
+![p4 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/23051bb3-57d3-49a2-b240-a21197952f7f)
 
 7. SNS Notification: Upon the successful completion of the Glue ETL job (when its state is "SUCCEEDED"), a CloudWatch Event (EventBridge) rule with the appropriate event pattern is triggered.
 ![p4 s8](https://github.com/Souvik7861/PROJECTS/assets/120063616/baa6272a-f868-4feb-b3b5-aefd03a92370)
