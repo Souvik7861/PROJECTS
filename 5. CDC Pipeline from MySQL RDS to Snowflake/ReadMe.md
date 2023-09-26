@@ -1,4 +1,6 @@
 # CDC Pipeline from MySQL RDS to Snowflake
+![p5 s0](https://github.com/Souvik7861/PROJECTS/assets/120063616/c0bcc944-fd5c-4084-9e6d-34f0d3f5a32d)
+
 ## Project Overview
 This data engineering project focuses on creating a robust data pipeline for processing and managing data using a variety of AWS services and Snowflake. The project's main objective is to enable real-time data capture, transformation, and storage, making it accessible for analytics and reporting purposes. Here's an overview of the key components and steps involved:
 
