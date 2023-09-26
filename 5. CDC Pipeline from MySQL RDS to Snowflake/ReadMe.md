@@ -9,15 +9,16 @@ The binary log is a set of log files that contain information about data modific
 In the navigation pane, choose Parameter groups & create a new parameter group for MySQL 8.0.
 Select the created parameter group, choose Edit.
 Set the binlog_format as 'ROW' in the RDS Parameter Group.
+![p5 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/f98e839c-5798-4b67-8041-4964033ca4f0)
 
 #### Step 2: Create an MySQL RDS instance
 Create an MySQL RDS (single AZ is sufficient) from the AWS Console.
 Note: Use the parameter group created in Step 1 for the RDS you just created.
 
 VVI: The automated backups feature determines whether binary logging is turned on or off for MySQL. You have the following options:
-
 Turn binary logging on: Set the backup retention period to a positive nonzero value.
 Turn binary logging off: Set the backup retention period to zero.
+
 #### Step 3: Configure RDS for CDC
 Run the following procedure after connecting to RDS MySQL with any SQL client of your choice. It will change the binlog retention duration to 24 hours.
 ```sql
@@ -41,7 +42,7 @@ CREATE TABLE CDC_schema.Persons (
 ```
 #### Step 4: Create a Kinesis Stream
 Create a Kinesis stream with one shard.
-#### Step 5: Create a Kinesis Firehose and Enable Transformation with Lambda Function
+#### Step 5: Create a Kinesis Firehose and Enable Transformation with Lambda Function and configure Buffer size and Buffer interval as per your needs , for POC purpose we will set Buffer size of 0.2 MiB and Buffer interval of 60 seconds
 Lambda Code:
 ```python
 import json
