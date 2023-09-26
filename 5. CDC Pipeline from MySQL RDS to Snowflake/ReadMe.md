@@ -102,9 +102,31 @@ python runner.py
 Ctrl+B and then D
 ```
 
-#### Step 8: Lambda for Data Processing
+#### Step 8: Create Lambda layer and Lambda function for Data Processing
 From the destination (staging) S3 bucket, trigger a Lambda function that processes the file and calls the stored procedure in snowflake based on details in each record.
-Lambda Code:
+Lambda Layer code :
+```bash
+sudo apt-get update
+sudo apt install python3-virtualenv
+virtualenv snowflake_test
+source snowflake_test/bin/activate
+python3 --version  
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip
+sudo apt-get install -y libssl-dev libffi-dev
+mkdir -p lambda_layers/python/lib/python3.10/site-packages
+cd lambda_layers/python/lib/python3.10/site-packages
+pip3 install \
+--platform manylinux2010_x86_64 \
+--implementation cp \
+--only-binary=:all: --upgrade \
+--target venv/lib/python3.10/site-packages/ \
+ snowflake-connector-python==2.7.9 boto3>=1.26.153 botocore>=1.29.153
+cd ~/lambda_layers
+sudo apt install zip
+zip -r snowflake_lambda_layer.zip *
+```
+Lambda function Code:
 ```python
 import json
 import boto3
@@ -182,6 +204,7 @@ def lambda_handler(event, context):
     }
 ```
 #### Step 9: Create the Stored Procedures in Snowflake .
+Create the Stored Procedures in Snowflake , which will be called by above Lambda function based on each record data .
 ```sql
 CREATE OR REPLACE PROCEDURE insert_procedure("PERSONID" INT, "FULLNAME" STRING, "CITY" STRING)
 RETURNS STRING
@@ -209,3 +232,5 @@ BEGIN
 RETURN 'Update Success';
 END;
 ```
+#### Step 10: Test the Data Pipeline by inserting, deleting and updating data in MySQL rds.
+Run the sql commands in test file and check if the change is captured in snowflake or not .
