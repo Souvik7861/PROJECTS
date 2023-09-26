@@ -43,7 +43,7 @@ CREATE TABLE CDC_schema.Persons (
 #### Step 4: Create a Kinesis Stream
 Create a Kinesis stream with one shard.
 #### Step 5: Create a Kinesis Firehose.
-Create a Kinesis Firehose and Enable Transformation with Lambda Function and configure Buffer size and Buffer interval as per your needs , for POC purpose we will set Buffer size of 0.2 MiB and Buffer interval of 60 seconds    
+Create a Kinesis Firehose and Enable Transformation with Lambda Function and configure Buffer size and Buffer interval as per your needs , for POC purpose we will set Buffer size of 0.2 MiB and Buffer interval of 60 seconds.    
 
 Lambda Code:
 ```python
@@ -87,9 +87,9 @@ sudo apt install python3-pip
 python3 -m pip install --upgrade pip
 pip install mysql-replication boto3 -t .
 ```
-For more details about the package, you can refer to this link.
+For more details about the package, you can refer to this [link](https://github.com/julien-duponchelle/python-mysql-replication).
 
-Code reference: AWS Database Blog
+Code reference: [AWS Database Blog](https://aws.amazon.com/blogs/database/streaming-changes-in-a-database-with-amazon-kinesis/)
 
 For Tmux:
 ```bash
