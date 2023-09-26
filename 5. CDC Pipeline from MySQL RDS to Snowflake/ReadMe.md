@@ -10,8 +10,8 @@ In the navigation pane, choose Parameter groups & create a new parameter group f
 Select the created parameter group, choose Edit.
 Set the binlog_format as 'ROW' in the RDS Parameter Group.
 
-#### Step 2: Spin off an RDS
-Spin off an RDS (single AZ is sufficient) from the AWS Console.
+#### Step 2: Create an MySQL RDS instance
+Create an MySQL RDS (single AZ is sufficient) from the AWS Console.
 Note: Use the parameter group created in Step 1 for the RDS you just created.
 
 VVI: The automated backups feature determines whether binary logging is turned on or off for MySQL. You have the following options:
@@ -20,30 +20,29 @@ Turn binary logging on: Set the backup retention period to a positive nonzero va
 Turn binary logging off: Set the backup retention period to zero.
 #### Step 3: Configure RDS for CDC
 Run the following procedure after connecting to RDS MySQL with any SQL client of your choice. It will change the binlog retention duration to 24 hours.
-sql
-Copy code
+```sql
 CALL mysql.rds_set_configuration('binlog retention hours', 24);
+```
 Verification: Run the following SQL to verify that binary logging is enabled:
 
-sql
-Copy code
+```sql
 SHOW GLOBAL VARIABLES LIKE "log_bin";
+```
 Create the table on which you want to implement CDC:
 
-sql
-Copy code
-CREATE SCHEMA sattu_schema;
-CREATE TABLE sattu_schema.Persons (
+```sql
+CREATE SCHEMA CDC_schema;
+CREATE TABLE CDC_schema.Persons (
     PersonID int,
     FullName varchar(255),
     City varchar(255),
     PRIMARY KEY (PersonID)
 );
+```
 #### Step 4: Create a Kinesis Stream
 Create a Kinesis stream with one shard.
-#### Step 5: Create a Kinesis Firehose and Lambda Function
+#### Step 5: Create a Kinesis Firehose and Enable Transformation with Lambda Function
 Lambda Code:
-
 ```python
 import json
 import boto3
@@ -73,11 +72,10 @@ def lambda_handler(event, context):
     return {'records': output}
 ```
 #### Step 6: Create an IAM Role and EC2 Instance
-Create an IAM role for EC2 with Kinesis access (e.g., democdc).
-Create an EC2 instance.
-Execute the following commands on the EC2 instance:
-bash
-Copy code
+Create an IAM role for EC2 with Kinesis access (e.g., democdc).    
+Create an EC2 instance.    
+Execute the following commands on the EC2 instance:    
+```bash
 sudo apt-get update
 sudo apt install python3-virtualenv
 virtualenv mysql_test
@@ -85,26 +83,23 @@ source mysql_test/bin/activate
 sudo apt install python3-pip
 python3 -m pip install --upgrade pip
 pip install mysql-replication boto3 -t .
+```
 For more details about the package, you can refer to this link.
 
 Code reference: AWS Database Blog
 
-Code repository: GitHub Repository
-
 For Tmux:
-
-bash
-Copy code
+```bash
 source mysql_test/bin/activate
 sudo apt-get install tmux
 tmux new -s mysqlcdcdemo
 python runner.py
 Ctrl+B and then D
+```
 
 #### Step 7: Lambda for Data Processing
 From the destination (staging) S3 bucket, trigger a Lambda function that processes the file and calls the stored procedure based on details in each record.
 Lambda Code:
-
 ```python
 import json
 import boto3
