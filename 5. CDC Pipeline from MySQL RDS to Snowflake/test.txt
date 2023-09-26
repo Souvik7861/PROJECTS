@@ -1,0 +1,117 @@
+INSERT INTO CDC_schema.Persons VALUES (0,'Herman Zimmerman','Oklahoma City');
+
+INSERT INTO CDC_schema.Persons VALUES (1,'Lisa Ray','Columbus');
+
+INSERT INTO CDC_schema.Persons VALUES (2,'Terrell Reeves','Jacksonville');
+
+INSERT INTO CDC_schema.Persons VALUES (3,'Steve Goodwin','Charlotte');
+
+INSERT INTO CDC_schema.Persons VALUES (4,'Leah Tran','Detroit');
+
+INSERT INTO CDC_schema.Persons VALUES (5,'Wilbert Holmes','Washington');
+
+INSERT INTO CDC_schema.Persons VALUES (6,'Mindy George','Los Angeles');
+
+INSERT INTO CDC_schema.Persons VALUES (7,'Rosa Huff','Phoenix');
+
+INSERT INTO CDC_schema.Persons VALUES (8,'Clayton Jennings','Denver');
+
+INSERT INTO CDC_schema.Persons VALUES (9,'Darla Hayes','Charlotte');
+
+INSERT INTO CDC_schema.Persons VALUES (10,'Jack Hicks','Houston');
+
+INSERT INTO CDC_schema.Persons VALUES (11,'Francis Davidson','Austin');
+
+INSERT INTO CDC_schema.Persons VALUES (12,'Jerome Padilla','San Francisco');
+
+INSERT INTO CDC_schema.Persons VALUES (13,'Mamie Duncan','Houston');
+
+INSERT INTO CDC_schema.Persons VALUES (14,'Julia Cain','San Jose');
+
+INSERT INTO CDC_schema.Persons VALUES (15,'Leslie Klein','Seattle');
+
+INSERT INTO CDC_schema.Persons VALUES (16,'Isaac Bridges','Philadelphia');
+
+INSERT INTO CDC_schema.Persons VALUES (17,'Martin Adkins','Chicago');
+
+INSERT INTO CDC_schema.Persons VALUES (18,'Vincent Perry','Detroit');
+
+INSERT INTO CDC_schema.Persons VALUES (19,'William Porter','Fort Worth');
+
+INSERT INTO CDC_schema.Persons VALUES (20,'Domingo Byrd','Charlotte');
+
+INSERT INTO CDC_schema.Persons VALUES (21,'Leslie Torres','San Francisco');
+
+INSERT INTO CDC_schema.Persons VALUES (22,'Wanda Morrison','El Paso');
+
+INSERT INTO CDC_schema.Persons VALUES (23,'Gwen Caldwell','Indianapolis');
+
+INSERT INTO CDC_schema.Persons VALUES (24,'Tammy Daniels','Indianapolis');
+
+INSERT INTO CDC_schema.Persons VALUES (25,'Claude Gilbert','Phoenix');
+
+INSERT INTO CDC_schema.Persons VALUES (26,'Monique Bowers','Seattle');
+
+INSERT INTO CDC_schema.Persons VALUES (27,'Virginia Phillips','San Francisco');
+
+INSERT INTO CDC_schema.Persons VALUES (28,'Norman Graham','Columbus');
+
+INSERT INTO CDC_schema.Persons VALUES (29,'Gerard Fleming','San Jose');
+
+INSERT INTO CDC_schema.Persons VALUES (30,'Miranda Conner','Washington');
+
+INSERT INTO CDC_schema.Persons VALUES (31,'Alicia Mcdaniel','Indianapolis');
+
+INSERT INTO CDC_schema.Persons VALUES (32,'Miriam Erickson','Dallas');
+
+INSERT INTO CDC_schema.Persons VALUES (33,'Tyrone Hughes','Houston');
+
+INSERT INTO CDC_schema.Persons VALUES (34,'Peter Terry','Phoenix');
+
+INSERT INTO CDC_schema.Persons VALUES (35,'Julie Boone','Jacksonville');
+
+INSERT INTO CDC_schema.Persons VALUES (36,'Josephine Sherman','Boston');
+
+INSERT INTO CDC_schema.Persons VALUES (37,'Bridget Stevenson','Dallas');
+
+INSERT INTO CDC_schema.Persons VALUES (38,'Dave Thomas','San Antonio');
+
+INSERT INTO CDC_schema.Persons VALUES (39,'Francisco Holland','Indianapolis');
+
+INSERT INTO CDC_schema.Persons VALUES (40,'Garrett Hogan','Phoenix');
+
+INSERT INTO CDC_schema.Persons VALUES (41,'Verna Abbott','El Paso');
+
+INSERT INTO CDC_schema.Persons VALUES (42,'Mona Rios','Portland');
+
+INSERT INTO CDC_schema.Persons VALUES (43,'Tara Glover','Dallas');
+
+INSERT INTO CDC_schema.Persons VALUES (44,'Levi Arnold','Denver');
+
+INSERT INTO CDC_schema.Persons VALUES (45,'Jasmine Gutierrez','San Jose');
+
+INSERT INTO CDC_schema.Persons VALUES (46,'Abraham Ortega','San Francisco');
+
+INSERT INTO CDC_schema.Persons VALUES (47,'Heidi Ellis','Columbus');
+
+INSERT INTO CDC_schema.Persons VALUES (48,'Nathaniel Morales','Washington');
+
+INSERT INTO CDC_schema.Persons VALUES (49,'Stephen Harvey','Phoenix');
+
+INSERT INTO CDC_schema.Persons VALUES (50,'Kimberly Jordan','El Paso');
+
+
+
+
+
+UPDATE CDC.Persons set FullName = 'ABC XYZ' where PersonId = 50;
+
+INSERT INTO CDC.Persons VALUES (51,'Alica Bing','New York');
+
+INSERT INTO CDC.Persons VALUES (52,'Malinda Bing','Detroit');
+
+INSERT INTO CDC.Persons VALUES (53,'Chandler Bing','Portland');
+
+UPDATE CDC.Persons set FullName = 'ABC XYZ' where PersonId = 48 ;
+
+DELETE FROM CDC.Persons where PersonId = 49 ;
