@@ -144,7 +144,7 @@ def lambda_handler(event, context):
     # Get the contents of the S3 file.
     response = s3.get_object(Bucket=bucket_name, Key=key)
     
-    # Converting the response into a string and replacing ('') with ("")
+    # Converting the response into string and replacing ('') with ("")
     json_data = response['Body'].read().decode('utf-8').replace("'", '"')
 
     # Making the data iterable
@@ -152,7 +152,8 @@ def lambda_handler(event, context):
     for line in json_data.splitlines():
       records.append(line)
 
-    # Connect to Snowflake.
+
+      # Connect to Snowflake.
     snowflake_conn = snowflake.connector.connect(
       user="SOUVIK7861",
       password="Souvik7861@",
@@ -164,44 +165,46 @@ def lambda_handler(event, context):
     
     cursor = snowflake_conn.cursor()
         
-    for i in records:
+    for i in records :
         # Decode the contents of the S3 file into a Python object.
         data = json.loads(i) 
         print(data)
         
         Event_type = data["type"]
         
-        if Event_type == "WriteRowsEvent":
-            p1 = data["row"]["values"]["PersonID"]
-            p2 = data["row"]["values"]["FullName"]
-            p3 = data["row"]["values"]["City"]
-            sql = "CALL insert_procedure(%s,%s,%s) ;"
-            param = (p1, p2, p3)
-            cursor.execute(sql, param)
+        if Event_type == "WriteRowsEvent" :
+          p1 = data["row"]["values"]["PersonID"]
+          p2 = data["row"]["values"]["FullName"]
+          p3 = data["row"]["values"]["City"]
+          sql = "CALL insert_procedure(%s,%s,%s) ;"
+          param = (p1,p2,p3)
+          cursor.execute(sql,param)
           
-        elif Event_type == "DeleteRowsEvent":
-            p1 = data["row"]["values"]["PersonID"]
-            sql = "CALL delete_procedure(%s) ;"
-            param = (p1,)
-            cursor.execute(sql, param)
+        elif Event_type == "DeleteRowsEvent" :
+          p1 = data["row"]["values"]["PersonID"]
+          sql = "CALL delete_procedure(%s) ;"
+          param = (p1)
+          cursor.execute(sql,param)
           
-        elif Event_type == "UpdateRowsEvent":
-            p1 = data["row"]["after_values"]["PersonID"]
-            p2 = data["row"]["after_values"]["FullName"]
-            p3 = data["row"]["after_values"]["City"]
-            sql = "CALL update_procedure(%s,%s,%s) ;"
-            param = (p1, p2, p3)
-            cursor.execute(sql, param)
+        elif Event_type == "UpdateRowsEvent" :
+          p1 = data["row"]["after_values"]["PersonID"]
+          p2 = data["row"]["after_values"]["FullName"]
+          p3 = data["row"]["after_values"]["City"]
+          sql = "CALL update_procedure(%s,%s,%s) ;"
+          param = (p1,p2,p3)
+          cursor.execute(sql,param)
           
     cursor.close()
     # Close the Snowflake connection.
     snowflake_conn.close()
 
+    
     # TODO implement
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
     }
+
 ```
 #### Step 9: Create the Stored Procedures in Snowflake .
 Create the Stored Procedures in Snowflake , which will be called by above Lambda function based on each record data .
