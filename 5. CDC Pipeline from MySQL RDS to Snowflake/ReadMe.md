@@ -42,7 +42,8 @@ CREATE TABLE CDC_schema.Persons (
 ```
 #### Step 4: Create a Kinesis Stream
 Create a Kinesis stream with one shard.
-#### Step 5: Create a Kinesis Firehose and Enable Transformation with Lambda Function and configure Buffer size and Buffer interval as per your needs , for POC purpose we will set Buffer size of 0.2 MiB and Buffer interval of 60 seconds
+#### Step 5: Create a Kinesis Firehose.
+Create a Kinesis Firehose and Enable Transformation with Lambda Function and configure Buffer size and Buffer interval as per your needs , for POC purpose we will set Buffer size of 0.2 MiB and Buffer interval of 60 seconds
 Lambda Code:
 ```python
 import json
