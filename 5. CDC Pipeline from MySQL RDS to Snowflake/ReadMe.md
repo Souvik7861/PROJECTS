@@ -1,5 +1,5 @@
 # CDC Pipeline from MySQL RDS to Snowflake
-![p5 s0](https://github.com/Souvik7861/PROJECTS/assets/120063616/c0bcc944-fd5c-4084-9e6d-34f0d3f5a32d)
+![p5 s0](https://github.com/Souvik7861/PROJECTS/assets/120063616/edf8ba62-fa36-4c33-9103-2018430fca43)
 
 ## Project Overview
 This data engineering project focuses on creating a robust data pipeline for processing and managing data using a variety of AWS services and Snowflake. The project's main objective is to enable real-time data capture, transformation, and storage, making it accessible for analytics and reporting purposes. Here's an overview of the key components and steps involved:
@@ -75,7 +75,7 @@ def lambda_handler(event, context):
     return {'records': output}
 ```
 #### Step 6: Create an IAM Role and EC2 Instance
-Create an IAM role for EC2 with Kinesis access (e.g., democdc).    
+Create an IAM role for EC2 with Kinesis access .    
 Create an EC2 instance.    
 Execute the following commands on the EC2 instance:    
 ```bash
@@ -91,7 +91,9 @@ For more details about the package, you can refer to this [link](https://github.
 
 Code reference: [AWS Database Blog](https://aws.amazon.com/blogs/database/streaming-changes-in-a-database-with-amazon-kinesis/)
 
-For Tmux:
+#### Step 7: Deploy code runner.py on Tmux    
+To keep the code running even after disconnecting from EC2 instance , we will use tmux .    
+Tmux allows you to create multiple terminal sessions within a single window, and each session can run its own set of commands. This means that you can start a tmux session, deploy your code, and then detach from the session, leaving the code running in the background.
 ```bash
 source mysql_test/bin/activate
 sudo apt-get install tmux
@@ -100,8 +102,8 @@ python runner.py
 Ctrl+B and then D
 ```
 
-#### Step 7: Lambda for Data Processing
-From the destination (staging) S3 bucket, trigger a Lambda function that processes the file and calls the stored procedure based on details in each record.
+#### Step 8: Lambda for Data Processing
+From the destination (staging) S3 bucket, trigger a Lambda function that processes the file and calls the stored procedure in snowflake based on details in each record.
 Lambda Code:
 ```python
 import json
@@ -178,5 +180,32 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
     }
-```    
-These steps outline the setup and configuration required for your data engineering project. Follow them carefully to ensure that your project functions as intended.
+```
+#### Step 9: Create the Stored Procedures in Snowflake .
+```sql
+CREATE OR REPLACE PROCEDURE insert_procedure("PERSONID" INT, "FULLNAME" STRING, "CITY" STRING)
+RETURNS STRING
+AS
+BEGIN
+    INSERT INTO CDC_TABLE(PersonID, FullName, City) VALUES(:PERSONID,:FULLNAME,:CITY) ;
+RETURN 'Insert Success';
+END;
+
+
+CREATE OR REPLACE PROCEDURE delete_procedure("PERSONID_ARG" INT)
+RETURNS STRINGCDC_DESTINATION.PUBLIC.MY_S3_STAGE
+AS
+BEGIN
+    DELETE FROM CDC_TABLE WHERE PersonID = :PERSONID_ARG ;
+RETURN 'Delete Success';
+END;
+
+
+CREATE OR REPLACE PROCEDURE update_procedure("AFTER_PERSONID" INT ,"AFTER_FULLNAME" STRING, "AFTER_CITY" STRING)
+RETURNS STRING
+AS
+BEGIN
+    UPDATE CDC_TABLE SET FullName = :AFTER_FULLNAME ,City = :AFTER_CITY WHERE PersonID = :AFTER_PERSONID ;
+RETURN 'Update Success';
+END;
+```
