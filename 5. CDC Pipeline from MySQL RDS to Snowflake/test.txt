@@ -104,14 +104,14 @@ INSERT INTO CDC_schema.Persons VALUES (50,'Kimberly Jordan','El Paso');
 
 
 
-UPDATE CDC.Persons set FullName = 'ABC XYZ' where PersonId = 50;
+UPDATE CDC_schema.Persons set FullName = 'ABC XYZ' where PersonId = 50;
 
-INSERT INTO CDC.Persons VALUES (51,'Alica Bing','New York');
+INSERT INTO CDC_schema.Persons VALUES (51,'Alica Bing','New York');
 
-INSERT INTO CDC.Persons VALUES (52,'Malinda Bing','Detroit');
+INSERT INTO CDC_schema.Persons VALUES (52,'Malinda Bing','Detroit');
 
-INSERT INTO CDC.Persons VALUES (53,'Chandler Bing','Portland');
+INSERT INTO CDC_schema.Persons VALUES (53,'Chandler Bing','Portland');
 
-UPDATE CDC.Persons set FullName = 'ABC XYZ' where PersonId = 48 ;
+UPDATE CDC_schema.Persons set FullName = 'ABC XYZ' where PersonId = 48 ;
 
-DELETE FROM CDC.Persons where PersonId = 49 ;
+DELETE FROM CDC_schema.Persons where PersonId = 49 ;
