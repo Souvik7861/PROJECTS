@@ -1,0 +1,51 @@
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 0, 'FullName': 'Herman Zimmerman', 'City': 'Oklahoma City'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 1, 'FullName': 'Lisa Ray', 'City': 'Columbus'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 2, 'FullName': 'Terrell Reeves', 'City': 'Jacksonville'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 3, 'FullName': 'Steve Goodwin', 'City': 'Charlotte'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 4, 'FullName': 'Leah Tran', 'City': 'Detroit'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 5, 'FullName': 'Wilbert Holmes', 'City': 'Washington'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 6, 'FullName': 'Mindy George', 'City': 'Los Angeles'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 7, 'FullName': 'Rosa Huff', 'City': 'Phoenix'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 8, 'FullName': 'Clayton Jennings', 'City': 'Denver'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 9, 'FullName': 'Darla Hayes', 'City': 'Charlotte'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 10, 'FullName': 'Jack Hicks', 'City': 'Houston'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 11, 'FullName': 'Francis Davidson', 'City': 'Austin'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 12, 'FullName': 'Jerome Padilla', 'City': 'San Francisco'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 13, 'FullName': 'Mamie Duncan', 'City': 'Houston'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 14, 'FullName': 'Julia Cain', 'City': 'San Jose'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 15, 'FullName': 'Leslie Klein', 'City': 'Seattle'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 16, 'FullName': 'Isaac Bridges', 'City': 'Philadelphia'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 17, 'FullName': 'Martin Adkins', 'City': 'Chicago'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 18, 'FullName': 'Vincent Perry', 'City': 'Detroit'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 19, 'FullName': 'William Porter', 'City': 'Fort Worth'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 20, 'FullName': 'Domingo Byrd', 'City': 'Charlotte'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 21, 'FullName': 'Leslie Torres', 'City': 'San Francisco'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 22, 'FullName': 'Wanda Morrison', 'City': 'El Paso'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 23, 'FullName': 'Gwen Caldwell', 'City': 'Indianapolis'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 24, 'FullName': 'Tammy Daniels', 'City': 'Indianapolis'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 25, 'FullName': 'Claude Gilbert', 'City': 'Phoenix'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 26, 'FullName': 'Monique Bowers', 'City': 'Seattle'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 27, 'FullName': 'Virginia Phillips', 'City': 'San Francisco'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 28, 'FullName': 'Norman Graham', 'City': 'Columbus'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 29, 'FullName': 'Gerard Fleming', 'City': 'San Jose'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 30, 'FullName': 'Miranda Conner', 'City': 'Washington'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 31, 'FullName': 'Alicia Mcdaniel', 'City': 'Indianapolis'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 32, 'FullName': 'Miriam Erickson', 'City': 'Dallas'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 33, 'FullName': 'Tyrone Hughes', 'City': 'Houston'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 34, 'FullName': 'Peter Terry', 'City': 'Phoenix'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 35, 'FullName': 'Julie Boone', 'City': 'Jacksonville'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 36, 'FullName': 'Josephine Sherman', 'City': 'Boston'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 37, 'FullName': 'Bridget Stevenson', 'City': 'Dallas'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 38, 'FullName': 'Dave Thomas', 'City': 'San Antonio'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 39, 'FullName': 'Francisco Holland', 'City': 'Indianapolis'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 40, 'FullName': 'Garrett Hogan', 'City': 'Phoenix'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 41, 'FullName': 'Verna Abbott', 'City': 'El Paso'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 42, 'FullName': 'Mona Rios', 'City': 'Portland'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 43, 'FullName': 'Tara Glover', 'City': 'Dallas'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 44, 'FullName': 'Levi Arnold', 'City': 'Denver'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 45, 'FullName': 'Jasmine Gutierrez', 'City': 'San Jose'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 46, 'FullName': 'Abraham Ortega', 'City': 'San Francisco'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 47, 'FullName': 'Heidi Ellis', 'City': 'Columbus'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 48, 'FullName': 'Nathaniel Morales', 'City': 'Washington'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 49, 'FullName': 'Stephen Harvey', 'City': 'Phoenix'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 50, 'FullName': 'Kimberly Jordan', 'City': 'El Paso'}}}

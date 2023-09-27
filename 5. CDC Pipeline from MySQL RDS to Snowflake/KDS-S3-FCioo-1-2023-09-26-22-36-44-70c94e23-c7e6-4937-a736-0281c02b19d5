@@ -1,0 +1,6 @@
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'UpdateRowsEvent', 'row': {'before_values': {'PersonID': 50, 'FullName': 'Kimberly Jordan', 'City': 'El Paso'}, 'after_values': {'PersonID': 50, 'FullName': 'ABC XYZ', 'City': 'El Paso'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 51, 'FullName': 'Alica Bing', 'City': 'New York'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 52, 'FullName': 'Malinda Bing', 'City': 'Detroit'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'WriteRowsEvent', 'row': {'values': {'PersonID': 53, 'FullName': 'Chandler Bing', 'City': 'Portland'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'UpdateRowsEvent', 'row': {'before_values': {'PersonID': 48, 'FullName': 'Nathaniel Morales', 'City': 'Washington'}, 'after_values': {'PersonID': 48, 'FullName': 'ABC XYZ', 'City': 'Washington'}}}
+{'schema': 'CDC_schema', 'table': 'Persons', 'type': 'DeleteRowsEvent', 'row': {'values': {'PersonID': 49, 'FullName': 'Stephen Harvey', 'City': 'Phoenix'}}}
