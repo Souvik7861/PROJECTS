@@ -237,7 +237,7 @@ RETURN 'Update Success';
 END;
 ```
 #### Step 10: Test the Data Pipeline by inserting, deleting and updating data in MySQL rds.
-commands used to test the file are at test.txt .
+Run the sql commands in test.txt file and check if the change is captured in snowflake or not .
 
 Executed commands in MySQL rds :
 ![p5 s6](https://github.com/Souvik7861/PROJECTS/assets/120063616/d92a4748-558d-4e4e-908e-5103a0177490)
@@ -251,9 +251,5 @@ Files uploaded in s3 bucket after transformation in firehose :
 Query history in Snowflake :
 ![p5 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/e4930e2f-9796-4544-8d0f-0487767d48da)
 
-Table data in Snowflake at the end of test :
+Table data in Snowflake at the end of test :    
 ![p5 s9](https://github.com/Souvik7861/PROJECTS/assets/120063616/67777d43-27ce-4e62-87fe-ee1ab670ce0e)
-
-
-
-Run the sql commands in test file and check if the change is captured in snowflake or not .
