@@ -251,5 +251,5 @@ Files uploaded in s3 bucket after transformation in firehose :
 Query history in Snowflake :
 ![p5 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/e4930e2f-9796-4544-8d0f-0487767d48da)
 
-Table data in Snowflake at the end of test :    
+Table data in Snowflake at the end of test :                                                                
 ![p5 s9](https://github.com/Souvik7861/PROJECTS/assets/120063616/67777d43-27ce-4e62-87fe-ee1ab670ce0e)
