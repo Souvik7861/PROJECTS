@@ -66,7 +66,7 @@ CREATE SCHEMA IF NOT EXISTS consumption; -- Fact & dimension.
 CREATE SCHEMA IF NOT EXISTS common; -- For file formats sequence object etc.
 ```
 #### Step 3: External Stage in Source Schema
-Create an external stage in the source schema to host all the data from the local machine.  
+Create an external stage in the source schema to host all the data from the local machine.      
 Refer [storage integration](https://docs.snowflake.com/en/user-guide/data-load-s3-config-storage-integration) and [External stage](https://docs.snowflake.com/en/user-guide/data-load-s3-create-stage)
 ```sql
 -- Create storage integration for external stage
@@ -125,21 +125,21 @@ CREATE OR REPLACE TRANSIENT TABLE exchange_rate(
 Load the exchange-rate-data.csv dataset manually into the exchange_rate table.
 
 #### Step 6: Create Source sequences and Tables.
-Create sequences and source tables for each region to load data from the external stage.
+Create sequences and source tables for each region to load data from the external stage.    
 use [source_sequence&Tables.sql](https://github.com/Souvik7861/PROJECTS/blob/main/6.%20Snowflake%20Snowpark%20(Python)%20ETL%20%3A%20Amazon%20Sales%20Analytics/source_sequence%26Tables.sql)
 
 #### Step 7: Snowpark Python Code to Load Data from Stage to Source Schema
 Use the stage2source.py Snowpark Python code to load data from the external stage to the source schema.
 
 #### Step 8: Loading Data from Source to Curated Layer
-Create sequences and curated tables for each region in the curated schema.
+Create sequences and curated tables for each region in the curated schema.    
 use [curated_sequence&Tables.sql](https://github.com/Souvik7861/PROJECTS/blob/main/6.%20Snowflake%20Snowpark%20(Python)%20ETL%20%3A%20Amazon%20Sales%20Analytics/curated_sequence%26Tables.sql)
 
 #### Step 9: Snowpark Python Code - Source to Curated (IN, US, FR)
 Configure and run source2curated_in.py, source2curated_us.py and source2curated_fr.py to load data from the source schema to the curated schema for each region.
 
 #### Step 10: Working on Consumption Layer
-In the consumption schema, create dimension tables and fact tables.
+In the consumption schema, create dimension tables and fact tables.    
 use [consumption_dims&Fact_tables.sql](https://github.com/Souvik7861/PROJECTS/blob/main/6.%20Snowflake%20Snowpark%20(Python)%20ETL%20%3A%20Amazon%20Sales%20Analytics/consumption_dims%26Fact_tables.sql)
 
 #### Step 11: Data from Curated to Model (Snowpark Python Code)
