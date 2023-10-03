@@ -482,6 +482,8 @@ WHERE dd.ORDER_DT = :datebucket(ORDER_DT)
 GROUP BY dd.order_day
 ORDER BY dd.order_day;
 ```
+![p6 s2](https://github.com/Souvik7861/PROJECTS/assets/120063616/26d82904-9b32-4fcd-827d-f580ace4d149)
+
 Feel free to modify and expand upon these queries to create custom dashboards for your Amazon sales analytics.
 
 For a detailed explanation and to run the Snowpark Python code, refer to the corresponding Python files in this repository.
