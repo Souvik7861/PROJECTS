@@ -10,7 +10,7 @@ Data Sources
 The Amazon mobile sales data for three regions (India, USA, France) can be found here.
 
 ### Data Architecture Diagram
-Data Flow Diagram
+![p6 s3](https://github.com/Souvik7861/PROJECTS/assets/120063616/051ebb8d-ca3d-4773-894c-25de670a56d1)
 
 The data files are available in three different formats:
 
