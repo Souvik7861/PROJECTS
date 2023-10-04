@@ -157,6 +157,8 @@ use [consumption_dims&Fact_tables.sql](https://github.com/Souvik7861/PROJECTS/bl
 Configure and run [curated2model.py](https://github.com/Souvik7861/PROJECTS/blob/main/6.%20Snowflake%20Snowpark%20(Python)%20ETL%20%3A%20Amazon%20Sales%20Analytics/curated2model.py) to load data from the curated schema to the consumption schema in all dimension tables and the fact table.    
 ![p6 s9](https://github.com/Souvik7861/PROJECTS/assets/120063616/4dd6f92b-9975-4409-9d60-5385b35282c5)    
 
+![p6 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/0f78c908-9983-4995-9e43-f46eb3d7e222)    
+
 ![p6 s8](https://github.com/Souvik7861/PROJECTS/assets/120063616/99a698a0-9023-493a-89e4-b723bd9d7ff9)
 
 ### Step 12: Data is Loaded in Consumption Layer and Ready for Use
