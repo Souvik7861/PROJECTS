@@ -4,7 +4,6 @@
 This repository contains a PySpark-based data engineering pipeline for processing and transforming data related to US cities and prescription information. The pipeline performs data ingestion, validation, cleaning, transformation, and persistence into various data storage formats.
 
 ## Execution
-The following are snapshots of the execution of the data engineering pipeline.
 
 ### Data Ingestion
 - **Data Source**: 
