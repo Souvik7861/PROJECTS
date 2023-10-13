@@ -31,8 +31,8 @@ This repository contains a PySpark-based data engineering pipeline for processin
 ![p7 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/953ea8ee-91f7-4479-8404-2d66575cbf64)    
 
 ### Data Transformation
-- Transformations applied, such as column renaming or specific operations.
-- Snapshot of the transformed data.
+- data_report1 : which needs number of Zip Codes per city as zipcount and number of distinct prescribers assigned to each city.
+- data_report2 : which needs total tx_cnt(total_claim_count) count for each city and apply filter on prescribers only fron 20 to 50 years of exp and rank the prescribers based on their tx_cnt for each State
 
 ![Data Transformation](/images/data_transformation.png)
 
