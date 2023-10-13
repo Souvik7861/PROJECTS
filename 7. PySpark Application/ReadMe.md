@@ -7,8 +7,7 @@ This repository contains a PySpark-based data engineering pipeline for processin
 
 ### Data Ingestion
 - **Data Source**: 
-    - Data source: `us_cities_dimension.parquet`
-    - Path: `C:\Users\souvik\PycharmProjects\Pyspark_realtime_application\Source\olap\us_cities_dimension.parquet`
+    - Data source: `Source/olap/us_cities_dimension.parquet`,`Source/oltp/USA_Presc_Medicare_Data_12021.csv`
 - **Loading Data into DataFrame**:
     - Displaying the loaded data into a PySpark DataFrame.
 
