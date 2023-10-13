@@ -24,7 +24,10 @@ This repository contains a PySpark-based data engineering pipeline for processin
 ![p7 s4](https://github.com/Souvik7861/PROJECTS/assets/120063616/a8d130ad-9743-4721-863e-549429df0df9)
 
 - **Data Validation**:
-    - Checking for null values.
+    - Checking for null values.    
+        - Before :    
+![p7 s6](https://github.com/Souvik7861/PROJECTS/assets/120063616/eaa6da71-5ff5-40ec-8138-b56249edddf7)
+        - After :    
 ![p7 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/953ea8ee-91f7-4479-8404-2d66575cbf64)    
 
 ### Data Transformation
