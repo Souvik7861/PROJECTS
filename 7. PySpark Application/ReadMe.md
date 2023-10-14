@@ -33,28 +33,26 @@ This repository contains a PySpark-based data engineering pipeline for processin
 ### Data Transformation
 - data_report1 : Which needs number of Zip Codes per city as zipcount and number of distinct prescribers assigned to each city as presc_counts .    
 ![p7 s7](https://github.com/Souvik7861/PROJECTS/assets/120063616/2b1166a0-7f01-4c61-8a9f-10e0529f3258)    
-
+![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/ca564d65-7570-432a-b4b4-76acf07abf10)
 - data_report2 :
     1) where we need to apply filter on prescribers only fron 20 to 50 years of exp
     2) rank and selecting top 5 prescribers based on their tx_cnt for each State
 ![p7 s8](https://github.com/Souvik7861/PROJECTS/assets/120063616/59dd98e1-a476-4e64-a0c4-a9ae41d07494)
 
 ### Data Persistence
-- Saving the data into Hive tables.
-- Saving the data into MySQL tables.
+1. Persisting the data into Hive tables.
+   ![p7 s9](https://github.com/Souvik7861/PROJECTS/assets/120063616/c6d38d9a-ec67-46b6-a050-8f37bdb75c9f)    
+   ![p7 s11](https://github.com/Souvik7861/PROJECTS/assets/120063616/eabfa373-c066-41e2-a55a-2418092faf15)    
 
-![Data Persistence](/images/data_persistence.png)
+3. Persisting the data into MySQL tables.
+   ![p7 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/58a2f46f-c06d-4a43-bad8-5f7ca05ba7f6)
 
-### Data Reports
-- Displaying generated reports, which may include tables, charts, or other visual representations of the data.
-
-![Data Reports](/images/data_reports.png)
 
 ### Logging and Execution Time
 - Log file displaying the execution flow and any error messages.
 - Total execution time of the pipeline.
 
-![Logging and Execution Time](/images/logging_execution_time.png)
+
 
 ---
 
