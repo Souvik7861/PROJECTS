@@ -48,11 +48,6 @@ This repository contains a PySpark-based data engineering pipeline for processin
    ![p7 s10](https://github.com/Souvik7861/PROJECTS/assets/120063616/58a2f46f-c06d-4a43-bad8-5f7ca05ba7f6)
 
 
-### Logging and Execution Time
-- Log file displaying the execution flow and any error messages.
-- Total execution time of the pipeline.
-
-
 
 ---
 
