@@ -51,4 +51,4 @@ This repository contains a PySpark-based data engineering pipeline for processin
 
 ---
 
-For more details and code implementation, refer to `driver.py` and other relevant scripts in this repository.
+For more details on code implementation, refer to `driver.py` and other relevant scripts in this repository.
