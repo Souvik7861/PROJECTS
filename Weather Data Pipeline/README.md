@@ -1,6 +1,5 @@
 # Weather Data Pipeline
-![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e3ba62ba-1a5b-4c67-8172-826caa900a64)
-
+![p1 s0](https://github.com/Souvik7861/PROJECTS/assets/120063616/05d28999-d500-4b99-a337-f7ce0c892d78)   
 
 ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/6e17efb8-39a9-4282-ad7b-005e0b6c6443)
 
