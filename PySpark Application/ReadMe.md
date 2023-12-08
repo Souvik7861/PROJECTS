@@ -1,5 +1,9 @@
 # PySpark Application
 
+## Architecture Diagram    
+![p7 s12](https://github.com/Souvik7861/PROJECTS/assets/120063616/d74e5a8a-dde6-4f37-bebe-8ab1a069c04c)    
+
+
 ## Overview
 This repository contains a PySpark-based data engineering pipeline for processing and transforming data related to US cities and prescription information. The pipeline performs data ingestion, validation, cleaning, transformation, and persistence into various data storage formats.
 
