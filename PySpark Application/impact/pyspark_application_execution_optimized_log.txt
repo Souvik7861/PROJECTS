@@ -1,0 +1,207 @@
+C:\Users\souvik\PycharmProjects\Pyspark_realtime_application\venv\Scripts\python.exe C:\Users\souvik\PycharmProjects\Pyspark_realtime_application\driver.py 
+2023-12-12 22:03:18,035 - root -INFO -i am in the main method..
+2023-12-12 22:03:18,035 - root -INFO -calling spark object
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2023-12-12 22:03:21,864 - root -INFO -Validating spark object..........
+File is : us_cities_dimension.parquet
+C:\Users\souvik\PycharmProjects\Pyspark_realtime_application\Source\olap\us_cities_dimension.parquet
+2023-12-12 22:03:25,080 - root -INFO -reading file which is of > parquet
+2023-12-12 22:03:25,606 - root -INFO -reading file df_city : 7.57 seconds
+2023-12-12 22:03:25,606 - root -INFO -displaying file df_city
++-------------+-------------+--------+--------------------+-----------+--------------------+-------+---------+----------+-------+-------------------+--------------------+
+|         city|   city_ascii|state_id|          state_name|county_fips|         county_name|    lat|      lng|population|density|           timezone|                zips|
++-------------+-------------+--------+--------------------+-----------+--------------------+-------+---------+----------+-------+-------------------+--------------------+
+|     New York|     New York|      NY|            New York|      36061|            New York|40.6943| -73.9249|  18713220|  10715|   America/New_York|11229 11226 11225...|
+|  Los Angeles|  Los Angeles|      CA|          California|       6037|         Los Angeles|34.1139|-118.4068|  12750807|   3276|America/Los_Angeles|90291 90293 90292...|
+|      Chicago|      Chicago|      IL|            Illinois|      17031|                Cook|41.8373| -87.6862|   8604203|   4574|    America/Chicago|60018 60649 60641...|
+|        Miami|        Miami|      FL|             Florida|      12086|          Miami-Dade|25.7839| -80.2102|   6445545|   5019|   America/New_York|33129 33125 33126...|
+|       Dallas|       Dallas|      TX|               Texas|      48113|              Dallas|32.7936| -96.7662|   5743938|   1526|    America/Chicago|75287 75098 75233...|
+| Philadelphia| Philadelphia|      PA|        Pennsylvania|      42101|        Philadelphia|40.0077| -75.1339|   5649300|   4554|   America/New_York|19154 19151 19150...|
+|      Houston|      Houston|      TX|               Texas|      48201|              Harris|29.7863| -95.3889|   5464251|   1399|    America/Chicago|77069 77068 77061...|
+|      Atlanta|      Atlanta|      GA|             Georgia|      13121|              Fulton|33.7627| -84.4224|   5449398|   1441|   America/New_York|30334 30331 30332...|
+|   Washington|   Washington|      DC|District of Columbia|      11001|District of Columbia|38.9047| -77.0163|   5379184|   4457|   America/New_York|20010 20011 20012...|
+|       Boston|       Boston|      MA|       Massachusetts|      25025|             Suffolk|42.3188| -71.0846|   4688346|   5532|   America/New_York|02120 02121 02122...|
+|      Phoenix|      Phoenix|      AZ|             Arizona|       4013|            Maricopa|33.5722|-112.0891|   4219697|   1253|    America/Phoenix|85008 85009 85006...|
+|      Seattle|      Seattle|      WA|          Washington|      53033|                King|47.6211|-122.3244|   3789215|   3469|America/Los_Angeles|98109 98108 98104...|
+|San Francisco|San Francisco|      CA|          California|       6075|       San Francisco|37.7562| -122.443|   3592294|   7256|America/Los_Angeles|94130 94131 94132...|
+|      Detroit|      Detroit|      MI|            Michigan|      26163|               Wayne|42.3834| -83.1024|   3506126|   1864|    America/Detroit|48209 48208 48201...|
+|    San Diego|    San Diego|      CA|          California|       6073|           San Diego|32.8312|-117.1225|   3220118|   1686|America/Los_Angeles|92109 92108 92103...|
+|  Minneapolis|  Minneapolis|      MN|           Minnesota|      27053|            Hennepin|44.9635| -93.2678|   2977172|   3071|    America/Chicago|55403 55409 55408...|
+|        Tampa|        Tampa|      FL|             Florida|      12057|        Hillsborough|27.9942| -82.4451|   2908063|   1353|   America/New_York|33637 33629 33621...|
+|       Denver|       Denver|      CO|            Colorado|       8031|              Denver|39.7621|-104.8759|   2876625|   1831|     America/Denver|80264 80230 80231...|
+|     Brooklyn|     Brooklyn|      NY|            New York|      36047|               Kings|40.6501| -73.9496|   2559903|  14221|   America/New_York|11212 11213 11216...|
+|       Queens|       Queens|      NY|            New York|      36081|              Queens|40.7498| -73.7976|   2230722|   7885|   America/New_York|11361 11362 11363...|
++-------------+-------------+--------+--------------------+-----------+--------------------+-------+---------+----------+-------+-------------------+--------------------+
+only showing top 20 rows
+
+2023-12-12 22:03:27,372 - root -INFO -displaying file df_city : 9.34 seconds
+2023-12-12 22:03:27,372 - root -INFO -here to validate the df
+df_city row count : 28338
+2023-12-12 22:03:27,828 - root -INFO -checking for the files in the Fact...
+Src Files::USA_Presc_Medicare_Data_12021.csv
+C:\Users\souvik\PycharmProjects\Pyspark_realtime_application\Source\oltp\USA_Presc_Medicare_Data_12021.csv
+2023-12-12 22:03:27,828 - root -INFO -reading file which is of > csv
+2023-12-12 22:03:32,318 - root -INFO -reading file df_fact : 14.28 seconds
+2023-12-12 22:03:32,318 - root -INFO -displaying the df_fact dataframe
++----------+----------------------------+-------------------------+-------------------+--------------------+---------------------+----------------+--------------------+--------------------+----------+-----------------+-----------------------+----------------+---------------+---------------+-----------------------------+----------------------+------------------+----------------------------+---------------------+--------------------+------------+
+|       npi|nppes_provider_last_org_name|nppes_provider_first_name|nppes_provider_city|nppes_provider_state|specialty_description|description_flag|           drug_name|        generic_name|bene_count|total_claim_count|total_30_day_fill_count|total_day_supply|total_drug_cost|bene_count_ge65|bene_count_ge65_suppress_flag|total_claim_count_ge65|ge65_suppress_flag|total_30_day_fill_count_ge65|total_day_supply_ge65|total_drug_cost_ge65|years_of_exp|
++----------+----------------------------+-------------------------+-------------------+--------------------+---------------------+----------------+--------------------+--------------------+----------+-----------------+-----------------------+----------------+---------------+---------------+-----------------------------+----------------------+------------------+----------------------------+---------------------+--------------------+------------+
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|ATORVASTATIN CALCIUM|ATORVASTATIN CALCIUM|      NULL|               13|                   15.0|             450|         139.32|           NULL|                            *|                    13|              NULL|                        15.0|                  450|              139.32|      = 45.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|   CIPROFLOXACIN HCL|   CIPROFLOXACIN HCL|      NULL|               11|                   11.0|              96|          80.99|           NULL|                            *|                  NULL|                 *|                        NULL|                 NULL|                NULL|      = 43.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S| DOXYCYCLINE HYCLATE| DOXYCYCLINE HYCLATE|        20|               20|                   20.0|             199|         586.12|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 33.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|             ELIQUIS|            APIXABAN|      NULL|               17|                   17.0|             510|        6065.02|           NULL|                            *|                    17|              NULL|                        17.0|                  510|             6065.02|      = 44.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|          FUROSEMIDE|          FUROSEMIDE|        12|               17|                   17.0|             405|          45.76|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 55.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|     HYDRALAZINE HCL|     HYDRALAZINE HCL|      NULL|               16|                   16.0|             420|         169.48|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 36.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|ISOSORBIDE MONONI...|ISOSORBIDE MONONI...|        16|               33|                   35.0|            1005|         372.63|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 54.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|        LEVOFLOXACIN|        LEVOFLOXACIN|        26|               26|                   26.0|             159|         222.41|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 53.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|          LISINOPRIL|          LISINOPRIL|        14|               31|                   32.0|             960|         129.24|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 35.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S| METOPROLOL TARTRATE| METOPROLOL TARTRATE|        14|               33|                   37.0|            1050|         183.29|             14|                         NULL|                    33|              NULL|                        37.0|                 1050|              183.29|      = 51.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|       METRONIDAZOLE|       METRONIDAZOLE|        11|               12|                   12.0|             127|         152.66|             11|                         NULL|                    12|              NULL|                        12.0|                  127|              152.66|      = 44.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S| PANTOPRAZOLE SODIUM| PANTOPRAZOLE SODIUM|      NULL|               15|                   15.0|             450|         140.83|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 52.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|          PREDNISONE|          PREDNISONE|        17|               20|                   20.0|             121|          59.96|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 52.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|     WARFARIN SODIUM|     WARFARIN SODIUM|      NULL|               12|                   12.0|             236|         197.69|           NULL|                            *|                    12|              NULL|                        12.0|                  236|              197.69|      = 36.0|
+|2006000252|                   ENKESHAFI|                  ARDALAN|         CUMBERLAND|                  MD|    Internal Medicine|               S|             XARELTO|         RIVAROXABAN|        12|               34|                   34.0|             943|        12110.2|           NULL|                            #|                  NULL|                 #|                        NULL|                 NULL|                NULL|      = 52.0|
+|      NULL|                      KHALIL|                   RASHID|             TOLEDO|                  OH|       Anesthesiology|               S|ACETAMINOPHEN-COD...|ACETAMINOPHEN WIT...|        17|               51|                   51.0|            1398|         577.96|           NULL|                            #|                    37|              NULL|                        37.0|                  978|              437.25|      = 42.0|
+|      NULL|                      KHALIL|                   RASHID|             TOLEDO|                  OH|       Anesthesiology|               S|   AMITRIPTYLINE HCL|   AMITRIPTYLINE HCL|      NULL|               29|                   29.0|             870|          254.2|              0|                         NULL|                     0|              NULL|                         0.0|                    0|                 0.0|      = 41.0|
+|      NULL|                      KHALIL|                   RASHID|             TOLEDO|                  OH|       Anesthesiology|               S|            BACLOFEN|            BACLOFEN|        43|              104|                  112.0|            3194|        2106.97|             17|                         NULL|                    31|              NULL|                        31.0|                  890|              484.56|      = 40.0|
+|      NULL|                      KHALIL|                   RASHID|             TOLEDO|                  OH|       Anesthesiology|               S|             BUTRANS|       BUPRENORPHINE|        19|               63|                   63.0|            1764|       24514.23|           NULL|                            #|                    41|              NULL|                        41.0|                 1150|            16188.72|      = 33.0|
+|      NULL|                      KHALIL|                   RASHID|             TOLEDO|                  OH|       Anesthesiology|               S| CYCLOBENZAPRINE HCL| CYCLOBENZAPRINE HCL|      NULL|               11|                   11.0|             300|          31.88|           NULL|                            *|                  NULL|                 *|                        NULL|                 NULL|                NULL|      = 31.0|
++----------+----------------------------+-------------------------+-------------------+--------------------+---------------------+----------------+--------------------+--------------------+----------+-----------------+-----------------------+----------------+---------------+---------------+-----------------------------+----------------------+------------------+----------------------------+---------------------+--------------------+------------+
+only showing top 20 rows
+
+2023-12-12 22:03:32,586 - root -INFO -displaying file df_fact : 14.55 seconds
+df_fact row count : 1329329
+2023-12-12 22:03:33,150 - root -INFO -implementing data_processing methods...
+23/12/12 22:03:34 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
++-------+--------+----------+-----------+-----------+---------+-------+----------------+---------------+------------+------------+--------------+
+|summary|presc_id|presc_city|presc_state|presc_spclt|drug_name| tx_cnt|total_day_supply|total_drug_cost|years_of_exp|Country_name|presc_fullname|
++-------+--------+----------+-----------+-----------+---------+-------+----------------+---------------+------------+------------+--------------+
+|  count| 1329307|   1329328|    1329328|    1329328|  1329314|1329326|         1329328|        1329328|     1329328|     1329329|       1329329|
++-------+--------+----------+-----------+-----------+---------+-------+----------------+---------------+------------+------------+--------------+
+
++-------------+--------+--------------------+--------------------+----------+--------------------+
+|         city|state_id|          state_name|         county_name|population|                zips|
++-------------+--------+--------------------+--------------------+----------+--------------------+
+|     NEW YORK|      NY|            NEW YORK|            NEW YORK|  18713220|11229 11226 11225...|
+|  LOS ANGELES|      CA|          CALIFORNIA|         LOS ANGELES|  12750807|90291 90293 90292...|
+|      CHICAGO|      IL|            ILLINOIS|                COOK|   8604203|60018 60649 60641...|
+|        MIAMI|      FL|             FLORIDA|          MIAMI-DADE|   6445545|33129 33125 33126...|
+|       DALLAS|      TX|               TEXAS|              DALLAS|   5743938|75287 75098 75233...|
+| PHILADELPHIA|      PA|        PENNSYLVANIA|        PHILADELPHIA|   5649300|19154 19151 19150...|
+|      HOUSTON|      TX|               TEXAS|              HARRIS|   5464251|77069 77068 77061...|
+|      ATLANTA|      GA|             GEORGIA|              FULTON|   5449398|30334 30331 30332...|
+|   WASHINGTON|      DC|DISTRICT OF COLUMBIA|DISTRICT OF COLUMBIA|   5379184|20010 20011 20012...|
+|       BOSTON|      MA|       MASSACHUSETTS|             SUFFOLK|   4688346|02120 02121 02122...|
+|      PHOENIX|      AZ|             ARIZONA|            MARICOPA|   4219697|85008 85009 85006...|
+|      SEATTLE|      WA|          WASHINGTON|                KING|   3789215|98109 98108 98104...|
+|SAN FRANCISCO|      CA|          CALIFORNIA|       SAN FRANCISCO|   3592294|94130 94131 94132...|
+|      DETROIT|      MI|            MICHIGAN|               WAYNE|   3506126|48209 48208 48201...|
+|    SAN DIEGO|      CA|          CALIFORNIA|           SAN DIEGO|   3220118|92109 92108 92103...|
+|  MINNEAPOLIS|      MN|           MINNESOTA|            HENNEPIN|   2977172|55403 55409 55408...|
+|        TAMPA|      FL|             FLORIDA|        HILLSBOROUGH|   2908063|33637 33629 33621...|
+|       DENVER|      CO|            COLORADO|              DENVER|   2876625|80264 80230 80231...|
+|     BROOKLYN|      NY|            NEW YORK|               KINGS|   2559903|11212 11213 11216...|
+|       QUEENS|      NY|            NEW YORK|              QUEENS|   2230722|11361 11362 11363...|
++-------------+--------+--------------------+--------------------+----------+--------------------+
+only showing top 20 rows
+
++----------+----------+-----------+------------------+--------------------+------+----------------+---------------+------------+------------+-----------------+
+|  presc_id|presc_city|presc_state|       presc_spclt|           drug_name|tx_cnt|total_day_supply|total_drug_cost|years_of_exp|Country_name|   presc_fullname|
++----------+----------+-----------+------------------+--------------------+------+----------------+---------------+------------+------------+-----------------+
+|2006000252|CUMBERLAND|         MD| Internal Medicine|ATORVASTATIN CALCIUM|    13|             450|         139.32|          45|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|   CIPROFLOXACIN HCL|    11|              96|          80.99|          43|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine| DOXYCYCLINE HYCLATE|    20|             199|         586.12|          33|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|             ELIQUIS|    17|             510|        6065.02|          44|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|          FUROSEMIDE|    17|             405|          45.76|          55|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|     HYDRALAZINE HCL|    16|             420|         169.48|          36|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|ISOSORBIDE MONONI...|    33|            1005|         372.63|          54|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|        LEVOFLOXACIN|    26|             159|         222.41|          53|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|          LISINOPRIL|    31|             960|         129.24|          35|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine| METOPROLOL TARTRATE|    33|            1050|         183.29|          51|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|       METRONIDAZOLE|    12|             127|         152.66|          44|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine| PANTOPRAZOLE SODIUM|    15|             450|         140.83|          52|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|          PREDNISONE|    20|             121|          59.96|          52|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|     WARFARIN SODIUM|    12|             236|         197.69|          36|         USA|ENKESHAFI ARDALAN|
+|2006000252|CUMBERLAND|         MD| Internal Medicine|             XARELTO|    34|             943|        12110.2|          52|         USA|ENKESHAFI ARDALAN|
+|2006000293|    DAYTON|         NV|           Dentist|         AMOXICILLIN|    51|             121|          71.33|          43|         USA|    ESCOBAR JULIO|
+|2006000293|    DAYTON|         NV|           Dentist|HYDROCODONE-ACETA...|    11|              27|          63.43|          40|         USA|    ESCOBAR JULIO|
+|2006000408| NASHVILLE|         TN|Nurse Practitioner|          CALCITRIOL|    12|             217|         129.17|          32|         USA|  BLAKEMORE ROSIE|
+|2006000408| NASHVILLE|         TN|Nurse Practitioner|LEVOTHYROXINE SODIUM|    14|             399|         198.87|          43|         USA|  BLAKEMORE ROSIE|
+|2006000533|BROOKVILLE|         PA|   Family Practice|       ADVAIR DISKUS|    14|             420|        5415.66|          42|         USA|    GIRARDI DAVID|
++----------+----------+-----------+------------------+--------------------+------+----------------+---------------+------------+------------+-----------------+
+only showing top 20 rows
+
+2023-12-12 22:03:40,670 - root -INFO -implementing data_processing methods (data_clean) : 22.63 seconds
+2023-12-12 22:03:40,670 - root -INFO -validating schema for the dataframes....
++-------+--------+----------+-----------+-----------+---------+-------+----------------+---------------+------------+------------+--------------+
+|summary|presc_id|presc_city|presc_state|presc_spclt|drug_name| tx_cnt|total_day_supply|total_drug_cost|years_of_exp|Country_name|presc_fullname|
++-------+--------+----------+-----------+-----------+---------+-------+----------------+---------------+------------+------------+--------------+
+|  count| 1329292|   1329292|    1329292|    1329292|  1329292|1329292|         1329292|        1329292|     1329292|     1329292|       1329292|
++-------+--------+----------+-----------+-----------+---------+-------+----------------+---------------+------------+------------+--------------+
+
+2023-12-12 22:03:44,595 - root -INFO - check_for_nulls : 26.56 seconds
+2023-12-12 22:03:44,596 - root -INFO -data transformation executed...
+2023-12-12 22:03:44,687 - root -INFO -displaying the df_report_1
++-------------+----------+---------------+----------+----------+------------+
+|         city|state_name|    county_name|population|zipscounts|presc_counts|
++-------------+----------+---------------+----------+----------+------------+
+|STATEN ISLAND|  NEW YORK|       RICHMOND|    476143|        12|         571|
+|      SYOSSET|  NEW YORK|         NASSAU|     19453|         2|          53|
+|       EUREKA|CALIFORNIA|       HUMBOLDT|     44236|         5|          75|
+|  SUN PRAIRIE| WISCONSIN|           DANE|     34661|         1|          29|
+|       BONITA|CALIFORNIA|      SAN DIEGO|     12706|         1|          13|
+| CHESTERFIELD|  MISSOURI|      ST. LOUIS|     47538|         3|         215|
+|   JANESVILLE| WISCONSIN|           ROCK|     70755|         4|         129|
+|    FAIRFIELD|CALIFORNIA|         SOLANO|    148683|         4|         127|
+|   COOKEVILLE| TENNESSEE|         PUTNAM|     50408|         5|         176|
+|      SARTELL| MINNESOTA|        STEARNS|     18926|         1|          34|
+|       FRUITA|  COLORADO|           MESA|     13478|         1|          21|
+|LAWRENCEVILLE|NEW JERSEY|         MERCER|      3949|         1|          78|
+|        BOWIE|  MARYLAND|PRINCE GEORGE'S|     58643|         7|          53|
+|      ALTURAS|CALIFORNIA|          MODOC|      2638|         1|           6|
+|   STATESBORO|   GEORGIA|        BULLOCH|     42102|         4|          76|
+|      MEDFORD|  NEW YORK|        SUFFOLK|     24406|         1|          21|
+|        GLOBE|   ARIZONA|           GILA|     13182|         3|          16|
+|   GUTTENBERG|NEW JERSEY|         HUDSON|     11121|         1|           5|
+|     HERSCHER|  ILLINOIS|       KANKAKEE|      1504|         1|           6|
+|      POMEROY|      OHIO|          MEIGS|      1757|         1|           8|
++-------------+----------+---------------+----------+----------+------------+
+only showing top 20 rows
+
+2023-12-12 22:03:56,338 - root -INFO -displaying the df_report_1 : 38.30 seconds
+2023-12-12 22:03:56,339 - root -INFO -Displaying data_report2 method....
++-----------+-------------------+-----------+------------+------------+------+----------------+---------------+----------+
+|   presc_id|     presc_fullname|presc_state|Country_name|years_of_exp|tx_cnt|total_day_supply|total_drug_cost|dense_rank|
++-----------+-------------------+-----------+------------+------------+------+----------------+---------------+----------+
+|-1662759025|        COOMES MARK|         AA|         USA|          42|    30|             150|         222.68|         1|
+|-2046463267|     CASSIDY GEORGE|         AA|         USA|          35|    12|              62|           36.5|         2|
+| 2086924743|     VOLNEK JILLIAN|         AE|         USA|          36|   246|            9031|        3412.29|         1|
+|-1996260772|       VARONE RICKY|         AE|         USA|          30|   125|            2430|        2818.97|         2|
+| 2086924743|     VOLNEK JILLIAN|         AE|         USA|          35|    61|            2310|          358.8|         3|
+| 2086924743|     VOLNEK JILLIAN|         AE|         USA|          41|    58|            2159|       46544.78|         4|
+| 2096867263|    SAUNDERS SHEREE|         AE|         USA|          41|    48|            1800|         607.79|         5|
+|-2046512683|     MUNGARA MAHIJA|         AK|         USA|          50|   412|           13181|       21544.69|         1|
+|-1379786104|CARRICABURU RACHAEL|         AK|         USA|          34|   394|           13041|        2261.29|         2|
+|-2046512683|     MUNGARA MAHIJA|         AK|         USA|          46|   378|           10900|      666869.03|         3|
+|-1945712863|       MAILER KAREN|         AK|         USA|          47|   329|            6732|        3008.15|         4|
+|-1632291205|       ENGLER MEGAN|         AK|         USA|          49|   299|           10609|        1695.13|         5|
+|-1571906923|      LACKEY THOMAS|         AL|         USA|          40|  4708|          137802|      126481.51|         1|
+|-1773030142|       PARKER CECIL|         AL|         USA|          37|  3157|           93581|       53403.62|         2|
+| 2127074787|    MANCHIKES LLOYD|         AL|         USA|          34|  2187|           64899|       57628.95|         3|
+|-1763926571|    LACHMAN MARILYN|         AL|         USA|          46|  1888|           59226|       13799.27|         4|
+|-1844686870|      RUSSELL BRUCE|         AL|         USA|          34|  1776|           46121|       63588.39|         5|
+|-1834465056|      SANTIAGO ERIC|         AP|         USA|          40|    58|            4020|         390.08|         1|
+|-1834465056|      SANTIAGO ERIC|         AP|         USA|          32|    52|            1737|       16760.74|         2|
+| 2086605152|     HOLLOWAY ELLEN|         AP|         USA|          50|    50|             258|         176.15|         3|
++-----------+-------------------+-----------+------------+------------+------+----------------+---------------+----------+
+only showing top 20 rows
+
+2023-12-12 22:04:03,733 - root -INFO -Displaying data_report2 : 45.70 seconds
+2023-12-12 22:04:03,733 - root -INFO -extracting files to output...
+2023-12-12 22:04:22,527 - root -INFO -Extracting files to output completed...
+2023-12-12 22:04:22,527 - root -INFO -extracting files to output : 64.49 seconds
+2023-12-12 22:04:22,527 - root -INFO -Total amount of time taken : 64.49 seconds
+2023-12-12 22:04:22,527 - root -INFO -Application done
+
+Process finished with exit code 0
