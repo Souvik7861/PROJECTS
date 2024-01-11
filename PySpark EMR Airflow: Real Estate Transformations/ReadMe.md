@@ -1,6 +1,8 @@
 # PySpark EMR Airflow: Real Estate Transformations
 ## Overview
-This data engineering project revolves around extracting, transforming, and loading real estate data from Redfin using PySpark, orchestrated with Apache Airflow. The processed data is then loaded into Snowflake, enabling seamless integration with Power BI for visualization.
+This data engineering project revolves around extracting, transforming, and loading real estate data from Redfin using PySpark (using AWS EMR) , orchestrated with Apache Airflow. The processed data is then loaded into Snowflake, enabling seamless integration with Power BI for visualization.  
+
+![p9 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/3274e167-2001-43ab-aaad-92dfc548a95b)
 
 ## Architecture Overview
 ### Data Extraction (PySpark on AWS EMR):
