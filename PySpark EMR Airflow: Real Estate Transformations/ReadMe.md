@@ -6,15 +6,15 @@ This data engineering project revolves around extracting, transforming, and load
 
 ## Architecture Overview
 ### Data Extraction (PySpark on AWS EMR):
-Extract Redfin data using PySpark on Amazon EMR.  
-Logs stored in the specified S3 bucket.
+- Extract Redfin data using PySpark on Amazon EMR.  
+- Logs stored in the specified S3 bucket.
 ### Data Transformation (PySpark on AWS EMR):
-Transform the data using PySpark.  
-Apache Airflow manages the workflow and dependencies.  
-Logs captured in EMR logs on S3.  
+- Transform the data using PySpark.  
+- Apache Airflow manages the workflow and dependencies.  
+- Logs captured in EMR logs on S3.  
 ### Data Loading (Snowpipe to Snowflake):  
-Load transformed data back to an S3 bucket.  
-Snowpipe triggers the loading of new data into the Snowflake data warehouse.  
+- Load transformed data back to an S3 bucket.  
+- Snowpipe triggers the loading of new data into the Snowflake data warehouse.  
 ### Data Visualization (Power BI):  
-Access Snowflake data for visualization in Power BI.  
+- Access Snowflake data for visualization in Power BI.  
 
