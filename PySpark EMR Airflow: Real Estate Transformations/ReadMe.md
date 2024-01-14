@@ -48,8 +48,17 @@ aws emr create-default-roles
 ### Data Loading (Snowpipe to Snowflake): 
 - Create table with Schema of the transformed data 
 - Create External stage with Storage Integration to the target directory in s3 bucket.
-- Create SnowPipe with auto_ingests "True" , which copies the data from target directory into the desired Table. (The AUTO_INGEST=true parameter specifies to read event notifications sent from an S3 bucket to an SQS queue when new data is ready to load)  
-  
+- Create SnowPipe with auto_ingests "True" , which copies the data from target directory into the desired Table. (The AUTO_INGEST=true parameter specifies to read event notifications sent from an S3 bucket to an SQS queue when new data is ready to load)
+  ![p9 s11](https://github.com/Souvik7861/PROJECTS/assets/120063616/b0b7a9ed-e25c-4857-b577-939ac3a1974b)
+- Test the Pipeline by Rerunning the Dag in Airflow and see if the data is loaded in desired table after transformation or not.
+  ![p9 s13](https://github.com/Souvik7861/PROJECTS/assets/120063616/63024df2-68a7-4f56-9f43-9fc72a3c223a)
+
 ### Data Visualization (Power BI):  
-- Access Snowflake data for visualization in Power BI.  
+- Access Snowflake data and Load it in Power BI.  
+![p9 s14](https://github.com/Souvik7861/PROJECTS/assets/120063616/77af8817-5c16-4b8c-9c22-21097f051e9e)  
+![p9 s15](https://github.com/Souvik7861/PROJECTS/assets/120063616/90e3c282-f4b9-4f7e-819a-a05e590e4d82)
+- After loading data in powerbi , create visualization.
+![p9 s16](https://github.com/Souvik7861/PROJECTS/assets/120063616/7659888f-150a-46b6-aa9d-032e7dfa643a)
+
+
 
