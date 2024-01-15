@@ -21,4 +21,21 @@
 ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/bdcb4ece-3f35-46dc-8813-d431c2691476)
 
 
+## Projects :
+- PySpark EMR Airflow | PySpark, Amazon EMR, Apache Airflow, Snowflake data warehouse , Powerbi
+  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/bb3d6de6-2e77-4f75-ad31-022f48e7304e)
+
+- PySpark Application | Python, PySpark, Hive, MySQL, Parquet, CSV
+  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e2f15b4e-d26d-485a-894b-c90ee8542492)
+
+- CDC Pipeline from MySQL RDS to Snowflake | MySQL RDS, EC2, Kinesis, Lambda, Snowflake
+  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/9872ac6d-ff81-4a56-9015-44bc40218304)
+
+- Serverless Kafka Data Pipeline | Amazon MSK, Lambda, SQS, API Gateway, Kinesis
+  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e911fa2e-8496-4152-a8fd-daa5cd63d8d6)
+
+- Automated Serverless DataLake | AWS Glue, Lambda, S3, CloudWatch, EventBridge, SNS
+  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e82492d3-58bf-4f04-9bee-416bbf3d1c83)
+
+
 
