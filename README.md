@@ -19,7 +19,7 @@
   ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e2f15b4e-d26d-485a-894b-c90ee8542492)
 
 - [CDC Pipeline from MySQL RDS to Snowflake | MySQL RDS, EC2, Kinesis, Lambda, Snowflake](https://github.com/Souvik7861/PROJECTS/tree/main/CDC%20Pipeline%20from%20MySQL%20RDS%20to%20Snowflake)
-  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/9872ac6d-ff81-4a56-9015-44bc40218304)
+  ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/3e88d09e-beb8-431c-b4de-6a6ede84669f)
 
 - [Serverless Kafka Data Pipeline | Amazon MSK, Lambda, SQS, API Gateway, Kinesis](https://github.com/Souvik7861/PROJECTS/tree/main/Serverless%20Kafka%20Data%20Pipeline)
   ![image](https://github.com/Souvik7861/PROJECTS/assets/120063616/e911fa2e-8496-4152-a8fd-daa5cd63d8d6)
