@@ -1,28 +1,39 @@
 # Serverless Kafka Data Pipeline
+## Overview 
+This project builds a serverless data pipeline on AWS using Kafka, Lambda, and SQS to ingest real-time data through an API, process it with serverless functions, and store it in S3 for analysis, offering scalability, cost-efficiency, and reliability for diverse data processing needs.
+
 ![p3 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/45cffae8-ffff-4536-9511-c1d547678c68)
 
-This project demonstrates how to build a data pipeline using Amazon Managed Streaming for Apache Kafka (Amazon MSK), AWS Lambda, and Amazon Simple Queue Service (SQS).
+## Purpose
+To create a robust and scalable data pipeline for efficiently collecting, processing, and storing real-time data streams using serverless technologies on AWS.	
 
-## Steps
+Objectives:	
+- **Real-time Data Ingestion** : Enable ingestion of data through an API gateway, which feeds into an SQS queue for buffering and asynchronous processing.
+- **Stream Processing with Kafka** : Utilize Apache Kafka, a high-throughput messaging system, to handle real-time data streams and distribute them for further processing.
+- **Serverless Architecture** : Employ AWS Lambda functions for event-driven processing, eliminating the need to manage infrastructure and scaling manually.
+- **Data Storage in S3** : Persist processed data in Amazon S3, a highly durable and scalable object storage service, for long-term archival and analysis.
+
+
+## Usage
 1. Create a VPC.
 2. Create two public subnets and two private subnets.
 3. Create an Internet gateway and attach it to the VPC.
 4. Create two route tables, one for the public subnets and one for the private subnets. 
 5. Attach the Internet gateway to the public route tables.
-6. Create a NAT gateway and attach it to the private route tables.
+6. Create a NAT gateway and attach it to the private route tables.		
 ![p3 s11](https://github.com/Souvik7861/PROJECTS/assets/120063616/bfe5daf3-f33b-4192-a61f-7491d496087b)
-7. Launch an Amazon MSK cluster in the private subnets.
+7. Launch an Amazon MSK cluster in the private subnets.			
 ![p3 s12](https://github.com/Souvik7861/PROJECTS/assets/120063616/5354bc4a-a139-401c-8209-cb77ceaafec7)
 
-8. Create a Lambda function Producer Lambda that publishes messages to the Amazon MSK cluster.
+8. Create a Lambda function Producer Lambda that publishes messages to the Amazon MSK cluster.				
 ![p3 s4](https://github.com/Souvik7861/PROJECTS/assets/120063616/53a3ddfb-4aee-403e-a285-6412e72c3811)
-9. Configure the Lambda function to have access to SQS, Amazon MSK, and the VPC.
+9. Configure the Lambda function to have access to SQS, Amazon MSK, and the VPC.				
 10. Launch an SQS queue.![p3 s3](https://github.com/Souvik7861/PROJECTS/assets/120063616/a5be47d2-66f4-40c9-af9b-e1f9af2db2d3)
 
 11. Create an API gateway and configure it to integrate with the SQS queue.
 12. Create an S3 bucket for data archival.
 13. Configure Amazon Kinesis Firehose.
-14. Create a Lambda function that consumes messages from Amazon MSK and triggers an Amazon Kinesis Firehose delivery stream, which then writes the messages to Amazon S3.![p3 s6](https://github.com/Souvik7861/PROJECTS/assets/120063616/06d766f8-9d35-4456-afb5-35800d9dbf63)
+14. Create a Lambda function that consumes messages from Amazon MSK and triggers an Amazon Kinesis Firehose delivery stream, which then writes the messages to Amazon S3.					![p3 s6](https://github.com/Souvik7861/PROJECTS/assets/120063616/06d766f8-9d35-4456-afb5-35800d9dbf63)
 
 15. Configure the Lambda function to have access to Amazon Kinesis , VPC and MSK.
 16. Launch an EC2 instance in each of the public and private subnets.
