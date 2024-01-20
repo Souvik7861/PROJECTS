@@ -1,10 +1,22 @@
 # PySpark EMR Airflow: Real Estate Transformations
 ## Overview
-This project creates an ETL pipeline that extracts data from a source, transforms it using a temporary EMR cluster, and loads it into a Snowflake database for visualization in Power BI. The pipeline is orchestrated using Apache Airflow.  
+This project creates an ETL pipeline that extracts data from a source, transforms it using a temporary EMR cluster, and loads it into a Snowflake database for visualization in Power BI. The pipeline is orchestrated using Apache Airflow.    
 
 ![p9 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/3274e167-2001-43ab-aaad-92dfc548a95b)
 
-## Architecture Overview
+## Purpose:
+
+To create a reliable and scalable pipeline for extracting, transforming, and loading real estate data into a Snowflake database for visualization in Power BI.      
+
+Key Objectives:  
+- Efficient Data Processing: Utilize PySpark on a temporary EMR cluster to handle large-scale data transformations efficiently.
+- Orchestration and Automation: Employ Apache Airflow to manage pipeline tasks, dependencies, and scheduling, ensuring smooth workflow execution.
+- Cost Optimization: Dynamically provision and terminate EMR clusters to minimize resource usage and costs.
+- Data Warehousing: Store transformed data in Snowflake, a cloud-based data warehouse optimized for analytics.
+- Visualization and Insights: Empower business users to create insightful visualizations and explore real estate data using Power BI.
+
+
+## Usage
 ### Environment Setup
 - Create an EC2 instance and install required dependencies and configure it to run Apache Airflow .
 ```bash
