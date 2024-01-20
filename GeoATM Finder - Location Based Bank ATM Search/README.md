@@ -1,13 +1,13 @@
 
 # GeoATM Finder: Location-Based Bank ATM Search
 
-![p2 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/3c1ac2ec-c825-4816-87e5-5a456e71cfaa)
+## Project Overview
 
+![p2 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/3c1ac2ec-c825-4816-87e5-5a456e71cfaa)
 
 This repository contains a data engineering project that focuses on creating a location-based search service for bank ATM locations using Amazon DynamoDB, AWS Lambda, and Algolia. The project allows users to search for nearby bank ATM locations based on their complete address and retrieve relevant results.
 
-### Project Overview
-The project involves several steps to set up the complete system for location-based ATM search:
+## Usage
 
 #### Step 1: Create DynamoDB Table and Enable Stream
 
