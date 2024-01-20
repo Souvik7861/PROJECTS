@@ -45,29 +45,4 @@ Overall, the project aims to create a more efficient, scalable, and user-friendl
 8. SNS Notification to Subscribers: The CloudWatch Event Rule sends an SNS notification to subscribers to inform them that the job is complete.
 ![p4 s11](https://github.com/Souvik7861/PROJECTS/assets/120063616/21899145-9991-4f80-8b36-4a20f0658a47)
 
-## Setup Instructions
-To set up and run this data engineering project, follow these steps:
 
-
-### Deployment
-
-1. Create an S3 bucket for storing raw data and a target S3 bucket for processed data. Note their names and update the configuration files accordingly.
-
-2. Create Glue Data Catalog databases and tables as needed for your data.
-
-3. Deploy the Lambda functions (lambda-trigger, notification-lambda) using AWS Lambda.
-
-4. Set up the necessary IAM roles and permissions for the Lambda functions, Glue, and S3 buckets.
-
-5. Create Glue ETL jobs for data transformation and loading.
-
-6. Configure CloudWatch Event Rules (EventBridge) to trigger Lambda functions based on the events described in the architecture.
-
-7. Set up SNS topics and subscribers for notifications.
-
-### Usage
-1. Upload raw data files to the S3 bucket designated for raw data.
-
-2. Monitor the AWS services and logs to ensure that each step in the pipeline executes as expected.
-
-3. When the Glue ETL job completes successfully (state is "SUCCEEDED"), subscribers will receive SNS notifications.
