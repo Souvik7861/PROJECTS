@@ -2,7 +2,19 @@
 
 ## Overview  
 ![p7 s12](https://github.com/Souvik7861/PROJECTS/assets/120063616/d74e5a8a-dde6-4f37-bebe-8ab1a069c04c)            
-This repository contains a PySpark-based data engineering pipeline for processing and transforming data related to US cities and prescription information. The pipeline performs data ingestion, validation, cleaning, transformation, and persistence into various data storage formats.
+
+This project builds a PySpark-powered data pipeline to process and analyze US city and prescription information. It ingests data from various sources, cleans and validates it, then creates insightful reports like city-level zip code/prescriber distribution and top prescribers per state based on experience and transactions. Finally, it stores the processed data in both Hive for large-scale analysis and MySQL for integration with other applications. All development and error monitoring are done within the PyCharm IDE. This project essentially provides a structured and flexible platform for exploring and extracting valuable insights from healthcare data.
+## Purpose:
+
+To create a robust and adaptable data pipeline using PySpark to enable efficient processing, analysis, and storage of US cities and prescription information, supporting a range of potential healthcare-related investigations and decision-making.
+
+Key Objectives:
+
+- Ingestion: Gather and organize data from diverse sources into a unified format.
+- Validation and Cleaning: Ensure data accuracy and integrity through thorough cleansing and error identification.
+- Transformation: Generate tailored data reports to reveal valuable insights
+- Persistence: Store processed data in Hive and MySQL, catering to distinct analytical and integration needs.
+
 
 ## Usage
 
