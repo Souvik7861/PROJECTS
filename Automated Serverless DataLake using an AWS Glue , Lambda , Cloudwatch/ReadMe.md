@@ -32,7 +32,7 @@ Overall, the project aims to create a more efficient, scalable, and user-friendl
 4. CloudWatch Event Rule (EventBridge): After the Glue Crawler has succeeded, a CloudWatch Event Rule (EventBridge) is triggered.
 ![p4 s5](https://github.com/Souvik7861/PROJECTS/assets/120063616/c1a10159-a2b0-44b0-964e-714b107ca1c3)
 
-5. Notification Lambda: The CloudWatch Event Rule triggers a Lambda function.
+5. Trigger glue job Lambda: The CloudWatch Event Rule triggers a Lambda function.
 ![p4 s6](https://github.com/Souvik7861/PROJECTS/assets/120063616/89b3b623-3816-43be-8a4d-a2a078580213)
 
 6. Glue ETL Job: The Lambda function triggers a Glue ETL job, which extracts data from the Glue Data Catalog table, transforms it, and loads it into a target S3 bucket.
