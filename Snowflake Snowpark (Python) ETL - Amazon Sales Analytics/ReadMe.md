@@ -1,24 +1,27 @@
 # Snowflake Snowpark (Python) ETL : Amazon Sales Analytics
 ## Overview
-This repository contains the code and documentation for an end-to-end Data Engineering (DE) project using Snowflake Snowpark and Python. The project focuses on efficiently handling Amazon's mobile sales order data from three regions (India, USA, France) and involves the following stages:
 
-1. Data is moved from an external stage to a source schema.
-2. Data is curated in the curated schema.
-3. Data is transformed and loaded into the consumption schema.
-4. Dashboards are created using the data in the consumption schema.
-   
-Data Sources
-The Amazon mobile sales data for three regions (India, USA, France) can be found here. [Link](https://github.com/Souvik7861/PROJECTS/tree/0d746155b62eb1f7549d63c45b1d0c106c2389fb/Snowflake%20Snowpark%20(Python)%20ETL%20-%20Amazon%20Sales%20Analytics/sales)
+This project builds a comprehensive data pipeline for analyzing Amazon mobile sales across India, USA, and France using Snowflake's Snowpark technology. It ingests, curates, and transforms data from various formats into a dimensionally modeled consumption layer, enabling insightful dashboards and unlocking valuable business intelligence.
 
-## Data Architecture Diagram
-![p6 s3](https://github.com/Souvik7861/PROJECTS/assets/120063616/051ebb8d-ca3d-4773-894c-25de670a56d1)
+![p6 s3](https://github.com/Souvik7861/PROJECTS/assets/120063616/051ebb8d-ca3d-4773-894c-25de670a56d1)   
 
-The data files are available in three different formats:
 
-India Sales Order Data: CSV Format  
-USA Sales Order Data: Parquet File Format   
-France Sales Order Data: JSON File Format   
+## Purpose 
+To create a structured and scalable data pipeline for Amazon mobile sales data from three regions (India, USA, France) to enable efficient analytics and insights generation.   
 
+Objectives:
+- Data Ingestion and Organization:
+   - Load data from various file formats (CSV, Parquet, JSON) into Snowflake.
+   - Establish a multi-layered data architecture for organization and accessibility.
+- Data Curation:
+   - Ensure data quality through cleaning, standardization, and deduplication.
+   - Convert local currency values to US Dollars for consistent analysis.
+- Data Transformation and Modeling:
+   - Create a dimensional model with fact and dimension tables to enhance query performance and support various analytical use cases.
+- Analytics Enablement:
+   - Construct a consumption layer ready for building dashboards and extracting meaningful insights.
+
+## Usage
 ### Step 1: Create User & Virtual Warehouse
 Before running the ETL workload, you need to create a Snowflake virtual warehouse and a user account.
 
@@ -85,7 +88,8 @@ CREATE STAGE my_s3_stage
   STORAGE_INTEGRATION = my_s3_int
   URL = 's3://myexternalstg/sales/';
 ```
--- After creating the external stage, manually put the dataset on the stage (S3 bucket).
+After creating the external stage, manually put the dataset on the stage (S3 bucket).         
+**Data Source**  :    The Amazon mobile sales data for three regions (India, USA, France) can be found here. [Link](https://github.com/Souvik7861/PROJECTS/tree/0d746155b62eb1f7549d63c45b1d0c106c2389fb/Snowflake%20Snowpark%20(Python)%20ETL%20-%20Amazon%20Sales%20Analytics/sales)
 
 ### Step 4: Create File Format Objects Within Common Schema
 Create file formats for reading and processing data from the external stage.
