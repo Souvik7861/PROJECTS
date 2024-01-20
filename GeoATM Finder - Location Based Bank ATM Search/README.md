@@ -2,8 +2,7 @@
 # GeoATM Finder: Location-Based Bank ATM Search
 
 ## Project Overview
-
-![p2 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/3c1ac2ec-c825-4816-87e5-5a456e71cfaa)
+![p2 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/22166281-ce9f-45ae-9369-4d4cfbc5698d)
 
 The GeoATM Finder project is a data engineering initiative focused on creating a location-based search service for bank ATM locations. Leveraging Amazon Web Services (AWS) and Algolia, the project aims to provide users with an efficient way to search for nearby ATMs based on their complete addresses.
 
