@@ -1,9 +1,20 @@
-# CDC Pipeline from MySQL RDS to Snowflake
-![p5 s00](https://github.com/Souvik7861/PROJECTS/assets/120063616/2ee5cdc0-7597-4bda-8f77-8f397563d210)
+# CDC Pipeline from MySQL RDS to Snowflake    
 
 ## Project Overview
-This data engineering project focuses on creating a robust data pipeline for processing and managing data using a variety of AWS services and Snowflake. The project's main objective is to enable real-time data capture, transformation, and storage, making it accessible for analytics and reporting purposes. Here's an overview of the key components and steps involved:
+This data engineering project focuses on creating a robust data pipeline for processing and managing data using a variety of AWS services and Snowflake. The project's main objective is to enable real-time data capture, transformation, and storage, making it accessible for analytics and reporting purposes.      
 
+![p5 s00](https://github.com/Souvik7861/PROJECTS/assets/120063616/2ee5cdc0-7597-4bda-8f77-8f397563d210)
+ 
+
+## Purpose    
+The primary purpose of this project is to establish a real-time data pipeline that continuously captures changes made to a MySQL RDS database and replicates those changes into Snowflake for analytics and reporting.    
+Key objectives of the project:      
+- Real-time Data Synchronization: Ensure that data in Snowflake is always up-to-date with the latest changes happening in MySQL RDS, enabling real-time analytics and decision-making.
+- Efficient Data Handling: Streamline the process of data transfer and transformation using AWS services, minimizing manual efforts and potential errors.
+- Scalable Data Infrastructure: Create a pipeline that can handle increasing data volumes and complexity, supporting future growth and analysis needs.
+- Enhanced Data Accessibility: Make the captured data readily available for various analytics and reporting purposes within Snowflake, promoting data-driven insights.    
+
+## Usage
 #### Step 1: Create a new RDS Parameter Group
 The binary log is a set of log files that contain information about data modifications made to a MySQL server instance.
 In the navigation pane, choose Parameter groups & create a new parameter group for MySQL 8.0.
