@@ -6,8 +6,9 @@ This repository contains the code and documentation for an end-to-end Data Engin
 2. Data is curated in the curated schema.
 3. Data is transformed and loaded into the consumption schema.
 4. Dashboards are created using the data in the consumption schema.
+   
 Data Sources
-The Amazon mobile sales data for three regions (India, USA, France) can be found here.
+The Amazon mobile sales data for three regions (India, USA, France) can be found here. [Link](https://github.com/Souvik7861/PROJECTS/tree/0d746155b62eb1f7549d63c45b1d0c106c2389fb/Snowflake%20Snowpark%20(Python)%20ETL%20-%20Amazon%20Sales%20Analytics/sales)
 
 ## Data Architecture Diagram
 ![p6 s3](https://github.com/Souvik7861/PROJECTS/assets/120063616/051ebb8d-ca3d-4773-894c-25de670a56d1)
