@@ -7,7 +7,8 @@ This data engineering project focuses on creating a robust data pipeline for pro
  
 
 ## Purpose    
-The primary purpose of this project is to establish a real-time data pipeline that continuously captures changes made to a MySQL RDS database and replicates those changes into Snowflake for analytics and reporting.    
+The primary purpose of this project is to establish a real-time data pipeline that continuously captures changes made to a MySQL RDS database and replicates those changes into Snowflake for analytics and reporting. 
+
 Key objectives of the project:      
 - Real-time Data Synchronization: Ensure that data in Snowflake is always up-to-date with the latest changes happening in MySQL RDS, enabling real-time analytics and decision-making.
 - Efficient Data Handling: Streamline the process of data transfer and transformation using AWS services, minimizing manual efforts and potential errors.
