@@ -5,7 +5,8 @@
 
 ![p2 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/3c1ac2ec-c825-4816-87e5-5a456e71cfaa)
 
-This repository contains a data engineering project that focuses on creating a location-based search service for bank ATM locations using Amazon DynamoDB, AWS Lambda, and Algolia. The project allows users to search for nearby bank ATM locations based on their complete address and retrieve relevant results.
+The GeoATM Finder project is a data engineering initiative focused on creating a location-based search service for bank ATM locations. Leveraging Amazon Web Services (AWS) and Algolia, the project aims to provide users with an efficient way to search for nearby ATMs based on their complete addresses.
+
 
 ## Usage
 
