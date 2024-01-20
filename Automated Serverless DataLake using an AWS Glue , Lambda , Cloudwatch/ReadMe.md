@@ -1,12 +1,25 @@
 # Automated Serverless DataLake using an AWS Glue , Lambda , Cloudwatch
 
 ## Overview
-This project is a data engineering pipeline designed to automate the process of ingesting, processing, and notifying users about data transformations. It leverages AWS services such as S3, Lambda, Glue, EventBridge, and SNS to achieve this.
+This project is a data engineering pipeline designed to automate the process of ingesting, processing, and notifying users about data transformations. It leverages AWS services such as S3, Lambda, Glue, EventBridge, and SNS to achieve this.  
 
-## Architecture
 Here's an overview of the architecture:
-![p4 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/d9e97a03-d2b5-4c6a-bff3-2eef18eeeecf)
+![p4 s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/d9e97a03-d2b5-4c6a-bff3-2eef18eeeecf)  
 
+## Purpose  
+The purpose of this project is to automate the process of ingesting, transforming, and notifying users about changes in data within a data lake. It achieves this by orchestrating various AWS services to create a serverless, event-driven pipeline.
+
+Key objectives of the project include:
+
+- Automating data ingestion: Automatically cataloging and processing new data as it arrives in the S3 bucket, eliminating manual intervention.
+- Transforming data: Converting raw data into a more usable format through the Glue ETL job, preparing it for analysis or consumption.
+- Sending notifications: Alerting users about the completion of data transformations through SNS, keeping stakeholders informed.
+- Enhancing efficiency: Streamlining data processing and reducing manual tasks, leading to cost savings and improved data availability.
+- Reducing operational overhead: Leveraging serverless architecture to eliminate the need for managing servers, simplifying maintenance and scaling.
+  
+Overall, the project aims to create a more efficient, scalable, and user-friendly data management solution.
+
+## Usage
 1. S3 Bucket for Raw Data: Data files are uploaded to an S3 bucket.
 ![p4 s2](https://github.com/Souvik7861/PROJECTS/assets/120063616/e8c71868-cc2b-4550-9721-a49a50d8f437)
 
