@@ -1,15 +1,12 @@
 ## Skills :
 ### Programming languages :
-![red1](https://github.com/Souvik7861/PROJECTS/assets/120063616/58e8d593-2796-48cd-ad88-f8b15829fc87)
+![rm s1](https://github.com/Souvik7861/PROJECTS/assets/120063616/1c3fd6d3-301a-454d-8084-cc4c51401590)
 
 ### Big Data Frameworks and Tools & Technologies :
-![red2](https://github.com/Souvik7861/PROJECTS/assets/120063616/ece13cc9-1694-4fc0-bab1-3a93e2326acd)
-
+![rm s2](https://github.com/Souvik7861/PROJECTS/assets/120063616/63c68dc6-c5e0-4f5f-90aa-46943941a904)
 
 ### AWS cloud services :
-![red3](https://github.com/Souvik7861/PROJECTS/assets/120063616/ae4fc604-85f9-450e-99a4-033b106669f3)
-
-
+![rm s3](https://github.com/Souvik7861/PROJECTS/assets/120063616/01cb2ba1-c50e-4689-bcb4-b393f56abb03)
 
 ## Projects :
 - [PySpark EMR Airflow | PySpark, Amazon EMR, Apache Airflow, Snowflake data warehouse , Powerbi](https://github.com/Souvik7861/PROJECTS/tree/main/PySpark%20EMR%20Airflow:%20Real%20Estate%20Transformations)
